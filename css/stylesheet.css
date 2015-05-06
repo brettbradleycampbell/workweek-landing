@@ -428,11 +428,23 @@ body {
   font-family: "Lato", sans-serif; }
 
 h1 {
-  font-size: 34pt; }
+  font-size: 28pt; }
 
 h2 {
-  font-size: 26pt; }
+  font-size: 20pt; }
 
+h3 {
+  font-size: 15pt; }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 34pt; }
+
+  h2 {
+    font-size: 26pt; }
+
+  h3 {
+    font-size: 17pt; } }
 h1, h2, h3, h4, h5 {
   font-family: "Quicksand";
   font-weight: 200;
@@ -472,7 +484,9 @@ form input[type="submit"].combined {
   border-radius: 0 4px 4px 0;
   border-color: #e9091a; }
 form input[type="email"].combined {
-  border-radius: 4px 0 0 4px; }
+  border-radius: 4px 0 0 4px;
+  width: 70%;
+  max-width: 240px; }
 form div {
   margin-bottom: 1em; }
 form input[type="submit"] {
@@ -528,6 +542,9 @@ form input[type="submit"] {
   right: 0;
   display: none; }
 
+.hero-image {
+  display: none; }
+
 .section {
   padding: 4% 0;
   background: #fff; }
@@ -541,21 +558,35 @@ form input[type="submit"] {
   text-align: left; }
 
 .menu {
-  text-align: right; }
+  text-align: right;
+  margin-top: 2px; }
+  @media (min-width: 450px) {
+    .menu {
+      margin-bottom: 0; } }
   .menu a {
-    display: inline-block;
-    margin-left: 24px;
+    display: block;
+    margin-left: 28px;
+    margin-bottom: 14px;
     text-transform: uppercase;
     font-size: 9pt;
     letter-spacing: 1px;
     font-family: "Quicksand";
     text-decoration: none; }
+    @media (min-width: 450px) {
+      .menu a {
+        display: inline-block; } }
 
 .nav {
-  padding: 20px;
+  padding: 15px;
   background: transparent;
   box-sizing: border-box;
   color: #313349; }
+  @media (min-width: 35em) {
+    .nav {
+      padding: 30px; } }
+  .nav .container {
+    width: 100%;
+    padding: 0; }
   .nav a {
     transition: color .2s;
     -webkit-transition: color .2s;
@@ -714,18 +745,47 @@ img {
     border-radius: 0 0 4px 4px; }
 
 .parallax-computer {
-  position: absolute;
-  width: 980px;
-  right: 44%; }
+  position: static;
+  width: 100%;
+  right: 43%; }
 
 .parallax-phone {
-  position: absolute;
+  position: static;
   width: 100%;
   right: -35%; }
+  .parallax-phone img {
+    margin-top: 75px; }
 
+@media (min-width: 35em) {
+  .parallax-computer {
+    width: 980px;
+    position: absolute; }
+
+  .parallax-phone {
+    position: absolute; } }
+@media (min-width: 1400px) {
+  .parallax-computer {
+    right: 46%; }
+
+  .parallax-phone {
+    right: -42%; }
+    .parallax-phone img {
+      margin-top: 0; } }
 #about {
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
+@media (min-width: 35em) {
+  #about {
+    overflow: hidden; } }
 .sign-up p {
   margin-bottom: 8px; }
+
+.desktop {
+  display: none; }
+
+@media only screen and (min-width: 35em) {
+  .hero-image {
+    display: block; }
+
+  .desktop {
+    display: inline-block; } }

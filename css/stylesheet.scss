@@ -49,8 +49,8 @@ $container-max-width: 980px;
 
 // nav
 $nav-background: transparent;
-$nav-padding: 20px;
-$nav-link-margin: 24px;
+$nav-padding: 30px;
+$nav-link-margin: 28px;
 $nav-link-color: $default-color;
 $nav-link-font-size: 9pt;
 $nav-font: "Quicksand";
@@ -81,8 +81,15 @@ body {
     font-family: $body-font;
 }
 
-h1 {font-size: 34pt}
-h2 {font-size: 26pt}
+h1 {font-size: 28pt}
+h2 {font-size: 20pt}
+h3 {font-size: 15pt}
+
+@media (min-width: 768px) {
+    h1 {font-size: 34pt}
+    h2 {font-size: 26pt}
+    h3 {font-size: 17pt}
+}
 
 h1, h2, h3, h4, h5 {
     font-family: "Quicksand";
@@ -130,6 +137,8 @@ form {
     }
     input[type="email"].combined {
         border-radius: 4px 0 0 4px;
+        width: 70%;
+        max-width: 240px;
     }
     div {
         margin-bottom: 1em;
@@ -276,6 +285,9 @@ form {
         display: none;
     }
 }
+.hero-image {
+    display: none;
+}
 // .bigger {
 //     transform: scale(1.2);
 // }
@@ -298,9 +310,17 @@ form {
 
 .menu {
     text-align: right;
+    margin-top: 2px;
+    @media (min-width: 450px) {
+        margin-bottom: 0;
+    }
     a {
-        display: inline-block;
+        display: block;
         margin-left: $nav-link-margin;
+        margin-bottom: 14px;
+        @media (min-width: 450px) {
+            display: inline-block;
+        }
         text-transform: uppercase;
         font-size: $nav-link-font-size;
         letter-spacing: 1px;
@@ -310,10 +330,17 @@ form {
 }
 
 .nav {
-    padding: $nav-padding;
+    padding: $nav-padding / 2;
     background: $nav-background;
     box-sizing: border-box;
     color: $nav-link-color;
+    @media (min-width: 35em) {
+        padding: $nav-padding;
+    }
+    .container {
+        width: 100%;
+        padding: 0;
+    }
     a {
         transition: color .2s;
         -webkit-transition: color .2s;
@@ -579,23 +606,48 @@ img {
 }
 
 .parallax-computer {
-    position: absolute;
-    width: 980px;
-    right: 44%;
-    // img {
-    //     // width: 80%;
-    //     max-width: 980px;
-    // }
+    position: static;
+    // width: 980px;
+    width: 100%;
+    right: 43%;
 }
 .parallax-phone {
-    position: absolute;
+    position: static;
     width: 100%;
     right: -35%;
+    img {
+        margin-top: 75px;
+    }
+}
+@media (min-width: 35em) {
+    .parallax-computer {
+        width: 980px;
+        position: absolute;
+    }
+    .parallax-phone {
+        position: absolute;
+    }
 
+}
+@media (min-width: 1400px) {
+    .parallax-computer {
+        right: 46%;
+    }
+    .parallax-phone {
+        right: -42%;
+        img {
+            margin-top: 0;
+        }
+    }
 }
 #about {
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
+}
+@media (min-width: 35em) {
+    #about {
+        overflow: hidden;
+    }
 }
 
 .sign-up p {
@@ -616,8 +668,21 @@ img {
 //    Modify as content requires.
 //    ==========================================================================
 
+.desktop {
+    display: none;
+}
+
 @media only screen and (min-width: 35em) {
     // Style adjustments for viewports that meet the condition
+    // .parallax-computer,
+    // .parallax-phone,
+    .hero-image {
+        // position: static;
+        display: block;
+    }
+    .desktop {
+        display: inline-block;
+    }
 }
 
 @media print,
