@@ -1,0 +1,613 @@
+// fonts
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+// =========
+// conditionals
+// =========
+
+$fixed-nav: F;
+
+$fading-hero: F;
+$hero-background-image: F;
+
+// =========
+// variables
+// =========
+
+// colors
+$primary-color: #F84654;
+$primary-color-reverse-text: #fff;
+$selection-background: #b3d4fc; // default: #b3d4fc
+$button-background: #8854B2;
+$button-background-hover: darken($button-background, 10%);
+$light-gray: #f0f3f5;
+
+// HTML defaults
+$default-color: #313349;
+$default-font-size: 1em;
+$default-line-height: 1.4em;
+$body-font: "Lato", sans-serif;
+
+// other
+$section-padding: 4%;
+$light-border: 1px solid #ccc;
+$border-radius: 2px;
+
+$hero-height: auto;
+$hero-image: none;
+$hero-background-color: #fff;
+$hero-overlay-color: black;
+$hero-overlay-opacity: 0;
+$hero-color: $default-color;
+$hero-max-width: 820px;
+$hero-header-top: 12%;
+
+$purple: #8854B2;
+
+$container-max-width: 980px;
+
+$nav-background: transparent;
+$nav-padding: 20px;
+$nav-link-margin: 24px;
+$nav-link-color: $default-color;
+$nav-link-font-size: 9pt;
+$nav-font: "Quicksand";
+
+$button-padding: 8px 18px;
+$button-color: #fff;
+$button-border-radius: 2px;
+$button-font-size: 14pt;
+$button-font: "Quicksand";
+
+//
+// import partials
+//
+
+@import "normalize.scss";
+@import "html5bp.scss";
+@import "skeleton.scss";
+
+
+/* Stylesheet */
+
+// ===
+// CSS 
+// ===
+
+body {
+    font-family: $body-font;
+}
+
+h1 {font-size: 30pt}
+h2 {font-size: 26pt}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Quicksand";
+    font-weight: 200;
+}
+
+p {
+    font-family: "Lato";
+    font-weight: 200;
+    font-size: 14pt;
+    line-height: 1.8em;
+}
+
+* {
+    font-weight: 200;
+}
+
+form {
+    input[type="text"],
+    input[type="email"], 
+    input[type="submit"],
+    select,
+    textarea, {
+        // display: block;
+        // width: 100%;
+        padding: 11px 10px 12px 10px;
+        border-radius: 4px;
+        border: $light-border;
+        background: #fff;
+        margin-bottom: 1em;
+        box-sizing: border-box;
+        -webkit-transition: all .3s;
+
+        &:focus {
+            outline: none;
+            border-color: $primary-color;
+        }
+    }
+    input[type="submit"] {
+        padding: 10px 24px;
+    }
+    div {
+        margin-bottom: 1em;
+    }
+    input[type="submit"] {
+        border-color: $primary-color;
+        background: $primary-color;
+        color: #fff;
+        &:hover {
+            background: darken($primary-color, 10%);
+            border-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// pretend form, for a picture, for iPhone 6 mockup (payment processing)
+
+$pf-button-background: purple;
+form.payment {
+    margin: 0 auto;
+    display: block;
+    max-width: 320px;
+    input[type="text"],
+    input[type="email"], 
+    input[type="submit"],
+    select,
+    textarea {
+        display: block;
+        width: 100%;
+        &.half {
+            width: 48%;
+            float: left;
+            &.left {
+                margin-right: 2%;
+            }
+            &.right {
+                margin-left: 2%;
+            }
+        }
+    }
+    input[type="submit"] {
+        padding: 16px;
+
+        background: rgb(81,156,247); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(81,156,247,1) 0%, rgba(76,107,232,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(81,156,247,1)), color-stop(100%,rgba(76,107,232,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(81,156,247,1) 0%,rgba(76,107,232,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(81,156,247,1) 0%,rgba(76,107,232,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(81,156,247,1) 0%,rgba(76,107,232,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(81,156,247,1) 0%,rgba(76,107,232,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#519cf7', endColorstr='#4c6be8',GradientType=0 ); /* IE6-9 */
+
+        border-color: darken(rgb(79,161,242), 20%);
+        font-size: 110%;
+    }
+    div {
+        margin-bottom: 0;
+    }
+    .logos {
+        img {
+            margin-left: 8px;
+            border: 1px solid #ddd;
+            padding: 4px;
+            border-radius: 4px;
+        }
+    }
+}
+
+.contact {
+    margin-top: 40px;
+}
+
+.modal.contact {
+    input[type="email"] {
+        border-color: #ddd;
+        &:focus {
+            border-color: #aaa;
+        }
+    }
+    input[type="submit"] {
+        background: $button-background;
+        border-color: $button-background;
+        &:hover {
+            background: $button-background-hover;
+            border-color: $button-background-hover;
+        }
+    }
+}
+
+// Hero
+
+.hero {
+    height: $hero-height + 20px;
+    box-sizing: border-box;
+    @if $hero-background-image == T {
+        background: $hero-image no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;        
+    } else {
+        background: $hero-background-color;
+    }
+    padding-top: 20px;
+    color: $hero-color;
+    // position: relative;
+    // left: -5%;
+    // top: -20px;
+}
+.hero-header {
+    margin-top: $hero-header-top;
+}
+.hero-container {
+    overflow: hidden;
+    position: relative;
+}
+.hero-content {
+    @if $fading-hero == T {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);   
+    } 
+    @if $fading-hero == F {
+        width: 90%;
+        max-width: $hero-max-width;
+        margin: 0 auto;
+    }
+}
+.hero-overlay {
+    background-color: $hero-overlay-color;
+    opacity: $hero-overlay-opacity;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    @if $hero-background-image == F {
+        display: none;
+    }
+}
+// .bigger {
+//     transform: scale(1.2);
+// }
+
+.section {
+	padding: $section-padding 0;
+    background: #fff;
+    &.color {
+        background-color: $primary-color;
+        color: $primary-color-reverse-text;
+    }
+    &.gray {
+        background-color: $light-gray;
+    }
+}
+
+.logo {
+    text-align: left;
+}
+
+.menu {
+    text-align: right;
+    a {
+        display: inline-block;
+        margin-left: $nav-link-margin;
+        text-transform: uppercase;
+        font-size: $nav-link-font-size;
+        letter-spacing: 1px;
+        font-family: $nav-font;
+        text-decoration: none;
+    }
+}
+
+.nav {
+    padding: $nav-padding;
+    background: $nav-background;
+    box-sizing: border-box;
+    color: $nav-link-color;
+    a {
+        transition: color .2s;
+        -webkit-transition: color .2s;
+        color: $nav-link-color;
+        &:hover, &:active {
+            color: $primary-color;
+
+        }
+    }
+
+    @if $fixed-nav == T {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+/* Grid */
+.group:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+.group-column {
+    float: left;
+    &.right {
+        float: right;
+    }
+    &.two {
+        width: 50%;
+    }
+}
+
+
+// should .container live here or in .skeleton grid? 
+.container {
+	width: 90%;
+	max-width: $container-max-width;
+	margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 2px
+}
+
+// skeleton grid extra styles
+
+.row {
+    margin-bottom: 5%;
+}
+
+
+    // to make 2 columsn on mobile...
+// .half-mobile {
+//     width: 46%;
+// }
+
+// .column.half-mobile,
+// .columns.half-mobile {
+// margin-left: 2%;
+// margin-right: 2%; }
+
+// contact modal 
+
+.modal-overlay {
+    background: #000;
+    position: fixed;
+    opacity: 0.8;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 2;
+
+}
+
+.modal {
+    background: transparent;
+    width: 90%;
+    // max-width: 450px;
+    margin: 0 auto;
+
+    position: fixed;
+
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+
+    border-radius: $border-radius;
+
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    box-sizing: border-box;
+
+}
+
+// @media (max-width: 768px) {
+
+//     .modal-button {
+//         top: 8px;
+//         right: 8px;
+//         padding: 6px;
+//         font-size: 80%;
+//     }
+//     .modal {
+//         max-height: 320px;
+//         overflow: scroll;
+//     }
+// }
+
+.bottom-image {
+    background-image: url(../img/purple-flowers.jpg); 
+    background-size: cover;
+}
+
+.button {
+    background: $button-background;
+    border-radius: $button-border-radius;
+    padding: $button-padding;
+    color: $button-color;
+    display: inline-block;
+    font-size: $button-font-size;
+    font-family: $button-font;
+    cursor: pointer;
+    &.red {
+        background: $primary-color;
+    }
+}
+
+.center-text {
+    text-align: center;
+}
+
+.social {
+    padding: 80px 0 120px 0;
+    margin: 0 auto;
+
+    a {
+        text-decoration: none;
+    }
+    .group {
+        padding-top: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+
+
+.insta-button {
+
+    border: 1px solid #bcbcbc;
+    border-radius: 3px;
+    padding: 4px;
+    padding-top: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    &:hover {
+        border-color: #ddd;
+    }
+    span {
+        position: relative;
+        top: 1px;
+    }
+    // img {
+    //     width: 13px;
+    // }
+}
+
+.footer {
+    padding: 20px;
+    background: $light-gray;
+}
+
+
+.group {
+    content: "";
+    display: table;
+    width: 100%;
+    text-align: center;
+    &:after {
+        clear: both;
+    }
+    &.three .float {
+        width: 33.333333333%;
+    }
+    .float {
+        float: left;
+    }
+}
+
+.inline {
+    div {
+        display: inline-block;
+    }
+}
+
+// Example Pop-ups
+.browser-window {
+    max-width: 1080px;
+    margin: 0 auto;
+    .browser-nav {
+        background: #e2e4e6;
+        padding: 12px;
+        border-radius: 10px 10px 0 0;
+        .circles, .tabs {
+            display: inline-block;
+        }
+        .circle {
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            border-radius: 100%;
+            margin-right: 5px;
+            &.red {
+                background: red;
+            }
+            &.orange {
+                background: orange;
+            }
+            &.green {
+                background: green;
+            }
+        }
+        .tab {
+            display: inline-block;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid gray;
+            border-bottom: none;
+            padding: 4px 12px;
+            margin-right: 2px;
+        }
+        // .arrow-container {
+        //     margin-top: 10px;
+        // }
+        // .arrow {
+        //     display: inline-block;
+        //     width: 24px;
+        //     margin-right: 4px;
+        //     img {
+        //         margin-top: -3px;
+        //     }
+        // }
+    }
+    iframe {
+        width: 100%;
+        border: none;
+        height: 500px;
+        border-radius: 0 0 4px 4px;
+    }
+}
+
+.parallax-computer {
+    position: absolute;
+    width: 980px;
+    right: 44%;
+    // img {
+    //     // width: 80%;
+    //     max-width: 980px;
+    // }
+}
+.parallax-phone {
+    position: absolute;
+    width: 100%;
+    right: -35%;
+
+}
+#about {
+    position: relative;
+    overflow: hidden;
+}
+
+.sign-up p {
+    margin-bottom: 8px;
+}
+
+// .parallax-outer {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+// }
+
+// ==========================================================================
+//    EXAMPLE Media Queries for Responsive Design.
+//    These examples override the primary ('mobile first') styles.
+//    Modify as content requires.
+//    ==========================================================================
+
+@media only screen and (min-width: 35em) {
+    // Style adjustments for viewports that meet the condition
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    // Style adjustments for high resolution devices
+}
