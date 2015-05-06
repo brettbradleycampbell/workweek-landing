@@ -434,6 +434,10 @@ img {
     font-size: $button-font-size;
     font-family: $button-font;
     cursor: pointer;
+    &.outline {
+        background: transparent;
+        border: 2px solid #fff;
+    }
     &.red {
         background: $primary-color;
     }

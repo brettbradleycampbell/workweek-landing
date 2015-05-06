@@ -677,6 +677,9 @@ img {
   font-size: 14pt;
   font-family: "Quicksand";
   cursor: pointer; }
+  .button.outline {
+    background: transparent;
+    border: 2px solid #fff; }
   .button.red {
     background: #F84654; }
 
