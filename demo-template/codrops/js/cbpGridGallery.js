@@ -132,16 +132,16 @@
 			}
 		} );
 
-		// // trick to prevent scrolling when slideshow is visible
-		// // no thanks, it doesn't work very well. 
-		// window.addEventListener( 'scroll', function() {
-		// 	if ( self.isSlideshowVisible ) {
-		// 		window.scrollTo( self.scrollPosition ? self.scrollPosition.x : 0, self.scrollPosition ? self.scrollPosition.y : 0 );
-		// 	}
-		// 	else {
-		// 		self.scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
-		// 	}
-		// });
+		// trick to prevent scrolling when slideshow is visible
+		// no thanks, it doesn't work very well. 
+		window.addEventListener( 'scroll', function() {
+			if ( self.isSlideshowVisible ) {
+				window.scrollTo( self.scrollPosition ? self.scrollPosition.x : 0, self.scrollPosition ? self.scrollPosition.y : 0 );
+			}
+			else {
+				self.scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+			}
+		});
 	};
 
 	CBPGridGallery.prototype._openSlideshow = function( pos ) {
