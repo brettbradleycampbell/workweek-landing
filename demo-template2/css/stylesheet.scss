@@ -1,0 +1,393 @@
+// fonts
+// @import url(http://fonts.googleapis.com/css?family=Lora:400,400italic);
+
+// =========
+// variables
+// =========
+
+// colors
+$selection-background: #b3d4fc; // default: #b3d4fc
+$button-background: #EF6F79;
+$button-background-hover: darken($button-background, 10%);
+$body-background: #fff;
+$sidebar-background: #f7f7f7;
+
+// HTML defaults
+$default-color: #313349;
+$default-font-size: 1em;
+$default-line-height: 1.4em;
+
+// other
+$section-padding: 8%;
+$light-border: 1px solid #e9eaec;
+$border-radius: 2px;
+
+$hero-height: 300px;
+
+$purple: #8854B2;
+
+$container-max-width: 900px;
+
+// Header
+$header-font-size: 1.5em;
+
+// Nav Menu
+$menu-font-size: 10pt;
+$menu-font-color: #999;
+$menu-font-color-hover: darken($menu-font-color, 20%);
+
+// Buttons
+$button-padding: 8px 12px;
+$button-color: #fff;
+
+//
+// import partials
+//
+
+@import "normalize.scss";
+@import "html5bp.scss";
+@import "skeleton.scss";
+
+
+/* Stylesheet */
+
+// ===
+// CSS 
+// ===
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+html {
+    font-size: 12pt;
+}
+body {
+    background: $sidebar-background;
+}
+
+p {
+    line-height: 1.8em;
+    color: #414345;
+}
+
+.hero-container {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.contact  {
+    input[type="email"], 
+    input[type="text"], 
+    input[type="submit"] {
+        width: 100%;
+        max-width: 350px;
+        padding: 12px;
+        border-radius: 4px;
+        border: 1px solid #fff;
+        background: transparent;
+        text-align: center;
+        margin-bottom: 1em;
+
+        box-sizing: border-box;
+
+        -webkit-transition: all .3s;
+        color: $purple;
+
+        &:focus {
+            outline: none;
+            border-color: $purple;
+        }
+    }
+
+    input[type="submit"] {
+        border-color: $purple;
+        background: $purple;
+        color: #fff;
+        &:hover {
+            background: darken($purple, 10%);
+            border-color: darken($purple, 10%);
+        }
+    }
+}
+
+.modal.contact {
+    input[type="email"],
+    input[type="text"] {
+        border-color: #ddd;
+        &:focus {
+            border-color: #aaa;
+        }
+    }
+    input[type="submit"] {
+        background: $button-background;
+        border-color: $button-background;
+        &:hover {
+            background: $button-background-hover;
+            border-color: $button-background-hover;
+        }
+    }
+}
+
+.hero {
+    height: $hero-height + 20px;
+    box-sizing: border-box;
+    background-image: url(../img/cup-steam.jpg);
+    background-size: cover;
+    background-position: center 50%;
+
+    width: 110%;
+    position: relative;
+    left: -5%;
+    top: -20px;
+
+}
+
+// HEADER
+.header {
+    padding: 32px 0;
+}
+.logo {
+    padding-bottom: 24px;
+    h1 {
+        font-size: $header-font-size;
+    }
+}
+.nav {
+    .nav-menu {
+        a {
+            display: block;
+            padding: 8px;
+            margin: 0 8px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: $menu-font-size;
+            color: $menu-font-color;
+            &:hover {
+                color: $menu-font-color-hover;
+            }
+        }
+    }
+}
+
+// @media only screen and (min-width: 480px) {
+//     .header {
+//         padding: 48px 0;
+//     }
+//     .nav {
+//         .nav-menu a {
+//             display: inline-block;
+//         }
+//     }
+// }
+
+// Replacing this with the codrops blueprint, probably.
+// // PORTFOLIO 
+ul.reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.portfolio-grid {
+    img {
+        max-width: 320px;
+    }
+}
+
+
+
+// @media only screen and (min-width: 480px) {
+//     ul.portfolio-grid {
+//     -webkit-column-count: 2;
+//       -moz-column-count: 2;
+//       column-count: 2;
+//       -webkit-column-gap: 18px;
+//       -moz-column-gap: 18px;
+//       column-gap: 18px;
+//     }    
+// }
+
+// @media only screen and (min-width: 600px) {
+//     ul.portfolio-grid {
+//     -webkit-column-count: 3;
+//       -moz-column-count: 3;
+//       column-count: 3;
+//       -webkit-column-gap: 18px;
+//       -moz-column-gap: 18px;
+//       column-gap: 18px;
+//     }
+// }
+
+// ABOUT
+.about-image {
+    background-image: url(http://farm7.static.flickr.com/6048/5905643448_584f3b11b3.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 600px) {
+    .about-image {
+        margin: 0;
+    }
+}
+.about .container {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    h2 {
+        margin-top: 0;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .desktop-table {
+        display: table;
+        .table-row {display: table-row}
+        .table-cell {display: table-cell}
+    }
+}
+.about .desktop-table {
+    width: 90%;
+    margin: 42px auto;
+}
+.about .table-cell {
+    vertical-align: top;
+    padding: 20px;
+}
+
+// FOOTER
+.footer {
+    padding: 24px 0;
+    background: #F0EFF0;
+    color: #717375;
+    font-size: 11pt;
+}
+
+//////////////  //
+//   ELEMENTS  //
+////////////  //
+
+// BUTTONS
+.button {
+    background: $button-background;
+    display: inline-block;
+    padding: $button-padding;
+    border-radius: $border-radius;
+    color: $button-color;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+// MODAL
+.modal-overlay {
+    background: #000;
+    position: fixed;
+    opacity: 0.8;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.modal-button {
+    cursor: pointer;
+}
+
+.modal {
+    background: #fff;
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    border-radius: $border-radius;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+
+}
+
+// FORMATTING
+
+.center-text {text-align: center;}
+.right-text {text-align: right;}
+
+// need this?
+.group {
+    content: "";
+    display: table;
+    width: 100%;
+    text-align: center;
+    &:after {
+        clear: both;
+    }
+    &.three .float {
+        width: 33.333333333%;
+    }
+    .float {
+        float: left;
+    }
+}
+
+
+// sidebar styles 
+
+@media only screen and (min-width: 720px) {
+
+    .header.sidebar {
+        float: left;
+        position: fixed;
+        width: 300px;
+    }
+    .main {
+        margin-left: 280px;
+        background: $body-background;
+    }
+
+    ul.portfolio-grid {
+        padding: 40px 0;
+        font-size: 0; // to remove unwanted white space.  
+        li {
+            display: inline-block;
+            margin: 4px;
+            img {
+                max-width: none;
+                max-height: 200px;
+            }    
+        }
+    }
+
+}
+
+
+// ==========================================================================
+//    EXAMPLE Media Queries for Responsive Design.
+//    These examples override the primary ('mobile first') styles.
+//    Modify as content requires.
+//    ==========================================================================
+
+@media only screen and (min-width: 35em) {
+    // Style adjustments for viewports that meet the condition
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    // Style adjustments for high resolution devices
+}
+
+
+
