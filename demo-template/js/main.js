@@ -37,9 +37,6 @@ $(document).ready(function(){
 
 // modal height
 
-    
-
-
 });
 
 

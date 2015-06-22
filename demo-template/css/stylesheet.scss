@@ -16,7 +16,7 @@ $default-font-size: 1em;
 $default-line-height: 1.4em;
 
 // other
-$section-padding: 80px;
+$section-padding: 8%;
 $light-border: 1px solid #e9eaec;
 $border-radius: 2px;
 
@@ -25,6 +25,9 @@ $hero-height: 300px;
 $purple: #8854B2;
 
 $container-max-width: 900px;
+
+// Header
+$header-font-size: 1.5em;
 
 // Nav Menu
 $menu-font-size: 10pt;
@@ -56,11 +59,10 @@ img {
 
 h1, h2, h3, h4, h5 {
     font-weight: normal;
-    // font-weight: 200;
 }
 
 html {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 p {
@@ -78,6 +80,7 @@ p {
 
 .contact  {
     input[type="email"], 
+    input[type="text"], 
     input[type="submit"] {
         width: 100%;
         max-width: 350px;
@@ -111,7 +114,8 @@ p {
 }
 
 .modal.contact {
-    input[type="email"] {
+    input[type="email"],
+    input[type="text"] {
         border-color: #ddd;
         &:focus {
             border-color: #aaa;
@@ -147,13 +151,16 @@ p {
 }
 .logo {
     padding-bottom: 24px;
+    h1 {
+        font-size: $header-font-size;
+    }
 }
 .nav {
     .nav-menu {
         a {
             display: block;
-            padding: 12px;
-            margin: 0 24px;
+            padding: 8px;
+            margin: 0 8px;
             text-decoration: none;
             text-transform: uppercase;
             font-size: $menu-font-size;
@@ -176,38 +183,35 @@ p {
     }
 }
 
-// PORTFOLIO 
-ul.portfolio-grid {
+// Replacing this with the codrops blueprint, probably.
+// // PORTFOLIO 
+ul.reset {
     margin: 0;
     padding: 0;
     list-style: none;
-    li {
-        max-width: 300px; // so the photos don't need to be huge to be retina-ready.  Just 600px max
-        margin: 0 auto 18px auto;
-    }
 }
 
-@media only screen and (min-width: 480px) {
-    ul.portfolio-grid {
-    -webkit-column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
-      -webkit-column-gap: 18px;
-      -moz-column-gap: 18px;
-      column-gap: 18px;
-    }    
-}
+// @media only screen and (min-width: 480px) {
+//     ul.portfolio-grid {
+//     -webkit-column-count: 2;
+//       -moz-column-count: 2;
+//       column-count: 2;
+//       -webkit-column-gap: 18px;
+//       -moz-column-gap: 18px;
+//       column-gap: 18px;
+//     }    
+// }
 
-@media only screen and (min-width: 600px) {
-    ul.portfolio-grid {
-    -webkit-column-count: 3;
-      -moz-column-count: 3;
-      column-count: 3;
-      -webkit-column-gap: 18px;
-      -moz-column-gap: 18px;
-      column-gap: 18px;
-    }
-}
+// @media only screen and (min-width: 600px) {
+//     ul.portfolio-grid {
+//     -webkit-column-count: 3;
+//       -moz-column-count: 3;
+//       column-count: 3;
+//       -webkit-column-gap: 18px;
+//       -moz-column-gap: 18px;
+//       column-gap: 18px;
+//     }
+// }
 
 // ABOUT
 .about-image {
@@ -218,8 +222,14 @@ ul.portfolio-grid {
     border-radius: 100%;
     margin: 0 auto;
 }
+@media only screen and (min-width: 600px) {
+    .about-image {
+        margin: 0;
+    }
+}
 .about .container {
-    border-top: $light-border;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
     h2 {
         margin-top: 0;
     }
@@ -338,3 +348,6 @@ ul.portfolio-grid {
        (min-resolution: 120dpi) {
     // Style adjustments for high resolution devices
 }
+
+
+

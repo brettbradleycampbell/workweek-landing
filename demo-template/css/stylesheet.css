@@ -424,7 +424,7 @@ h1, h2, h3, h4, h5 {
   font-weight: normal; }
 
 html {
-  font-size: 14pt; }
+  font-size: 12pt; }
 
 p {
   line-height: 1.8em;
@@ -438,6 +438,7 @@ p {
   z-index: -1; }
 
 .contact input[type="email"],
+.contact input[type="text"],
 .contact input[type="submit"] {
   width: 100%;
   max-width: 350px;
@@ -451,6 +452,7 @@ p {
   -webkit-transition: all .3s;
   color: #8854B2; }
   .contact input[type="email"]:focus,
+  .contact input[type="text"]:focus,
   .contact input[type="submit"]:focus {
     outline: none;
     border-color: #8854B2; }
@@ -462,9 +464,11 @@ p {
     background: #6e4291;
     border-color: #6e4291; }
 
-.modal.contact input[type="email"] {
+.modal.contact input[type="email"],
+.modal.contact input[type="text"] {
   border-color: #ddd; }
-  .modal.contact input[type="email"]:focus {
+  .modal.contact input[type="email"]:focus,
+  .modal.contact input[type="text"]:focus {
     border-color: #aaa; }
 .modal.contact input[type="submit"] {
   background: #EF6F79;
@@ -489,11 +493,13 @@ p {
 
 .logo {
   padding-bottom: 24px; }
+  .logo h1 {
+    font-size: 1.5em; }
 
 .nav .nav-menu a {
   display: block;
-  padding: 12px;
-  margin: 0 24px;
+  padding: 8px;
+  margin: 0 8px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 10pt;
@@ -507,30 +513,11 @@ p {
 
   .nav .nav-menu a {
     display: inline-block; } }
-ul.portfolio-grid {
+ul.reset {
   margin: 0;
   padding: 0;
   list-style: none; }
-  ul.portfolio-grid li {
-    max-width: 300px;
-    margin: 0 auto 18px auto; }
 
-@media only screen and (min-width: 480px) {
-  ul.portfolio-grid {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 18px;
-    -moz-column-gap: 18px;
-    column-gap: 18px; } }
-@media only screen and (min-width: 600px) {
-  ul.portfolio-grid {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-gap: 18px;
-    -moz-column-gap: 18px;
-    column-gap: 18px; } }
 .about-image {
   background-image: url(http://farm7.static.flickr.com/6048/5905643448_584f3b11b3.jpg);
   width: 200px;
@@ -539,8 +526,12 @@ ul.portfolio-grid {
   border-radius: 100%;
   margin: 0 auto; }
 
+@media only screen and (min-width: 600px) {
+  .about-image {
+    margin: 0; } }
 .about .container {
-  border-top: 1px solid #e9eaec; }
+  padding-top: 8%;
+  padding-bottom: 8%; }
   .about .container h2 {
     margin-top: 0; }
 
