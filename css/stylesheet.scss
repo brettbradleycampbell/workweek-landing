@@ -367,12 +367,14 @@ img {
 }
 
 // skeleton grid extra styles
-.row .columns {
+.two-column-layout .row .columns {
     text-align: center;
+    margin-top: 40px;
 }
 @media (min-width: 768px) {
-    .row .columns {
+    .two-column-layout .row .columns {
         text-align: left;
+        margin-top: 80px;
         h2 {
             margin-top: 0;
         }

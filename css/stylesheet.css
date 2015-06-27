@@ -641,13 +641,15 @@ img {
   max-width: 100%;
   border-radius: 2px; }
 
-.row .columns {
-  text-align: center; }
+.two-column-layout .row .columns {
+  text-align: center;
+  margin-top: 40px; }
 
 @media (min-width: 768px) {
-  .row .columns {
-    text-align: left; }
-    .row .columns h2 {
+  .two-column-layout .row .columns {
+    text-align: left;
+    margin-top: 80px; }
+    .two-column-layout .row .columns h2 {
       margin-top: 0; } }
 .row.reverse div.columns:nth-child(1) {
   float: right; }
