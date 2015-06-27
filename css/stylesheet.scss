@@ -6,22 +6,22 @@
 // conditionals
 // =========
 
-$fixed-nav: F;
+$fixed-nav: T;
 
 $fading-hero: F;
-$hero-background-image: F;
+$hero-background-image: T;
 
 // =========
 // variables
 // =========
 
 // colors
-$primary-color: #F84654;
+$primary-color: #65D1EA; //old workweek red: F84654
 $primary-color-reverse-text: #fff;
 $selection-background: #b3d4fc; // default: #b3d4fc
 $button-background: #8854B2;
 $button-background-hover: darken($button-background, 10%);
-$light-gray: #f0f3f5;
+$light-gray: #f1f2f2;
 
 // HTML defaults
 $default-color: #313349;
@@ -31,29 +31,31 @@ $body-font: "Lato", sans-serif;
 
 // other
 $section-padding: 4%;
-$light-border: 1px solid #ccc;
+$light-border: 1px solid #e1e1e1;
 $border-radius: 2px;
 
 // hero
 $hero-height: auto;
-$hero-image: none;
+$hero-image: url(../img/hero-free-website-cropped2.jpg);
+$hero-background-size: cover;
 $hero-background-color: #fff;
 $hero-overlay-color: black;
 $hero-overlay-opacity: 0;
 $hero-color: $default-color;
 $hero-max-width: 900px;
-$hero-header-top: 8%;
+$hero-padding: 70px 0 60px 0;
 
 // layout
 $container-max-width: 980px;
 
 // nav
-$nav-background: transparent;
-$nav-padding: 30px;
-$nav-link-margin: 28px;
-$nav-link-color: $default-color;
-$nav-link-font-size: 9pt;
+$nav-background: #fff;
+$nav-padding: 14px 10px;
+$nav-link-margin: 24px;
+$nav-link-color: #888;
+$nav-link-font-size: 10pt;
 $nav-font: "Quicksand";
+$nav-height: 67px; //calculated for margin of fixed nav hero
 
 // buttons
 $button-padding: 8px 18px;
@@ -81,12 +83,12 @@ body {
     font-family: $body-font;
 }
 
-h1 {font-size: 28pt}
+h1 {font-size: 24pt}
 h2 {font-size: 20pt}
 h3 {font-size: 15pt}
 
 @media (min-width: 768px) {
-    h1 {font-size: 34pt}
+    h1 {font-size: 52px}
     h2 {font-size: 26pt}
     h3 {font-size: 17pt}
 }
@@ -100,8 +102,8 @@ h1, h2, h3, h4, h5 {
 p {
     font-family: "Lato";
     font-weight: 200;
-    font-size: 14pt;
-    line-height: 1.8em;
+    font-size: 18px;
+    line-height: 1.6em;
 }
 
 * {
@@ -116,30 +118,33 @@ form {
     textarea, {
         // display: block;
         // width: 100%;
-        padding: 12px 10px 11px 10px;
+        // padding: 12px 10px 11px 10px; //for .combined? 
+        padding: 14px;
         border-radius: 4px;
-        border: $light-border;
+        border: none;
         background: #fff;
         margin-bottom: 1em;
         box-sizing: border-box;
         -webkit-transition: all .3s;
+        font-size: $button-font-size;
+        font-family: $button-font;
 
         &:focus {
             outline: none;
             border-color: $primary-color;
         }
     }
-    input[type="submit"].combined {
-        padding: 10px 24px;
-        margin-left: -4px;
-        border-radius: 0 4px 4px 0;
-        border-color: darken($primary-color, 15%);
-    }
-    input[type="email"].combined {
-        border-radius: 4px 0 0 4px;
-        width: 70%;
-        max-width: 240px;
-    }
+    // input[type="submit"].combined {
+    //     padding: 10px 24px;
+    //     margin-left: -4px;
+    //     border-radius: 0 4px 4px 0;
+    //     border-color: darken($primary-color, 15%);
+    // }
+    // input[type="email"].combined {
+    //     border-radius: 4px 0 0 4px;
+    //     width: 70%;
+    //     max-width: 240px;
+    // }
     div {
         margin-bottom: 1em;
     }
@@ -147,83 +152,34 @@ form {
         border-color: $primary-color;
         background: $primary-color;
         color: #fff;
+        padding: 14px 26px;
         &:hover {
             background: darken($primary-color, 10%);
             border-color: darken($primary-color, 10%);
         }
     }
-}
 
-// pretend form, for a picture, for iPhone 6 mockup (payment processing)
-
-// $pf-button-background: purple;
-// form.payment {
-//     margin: 0 auto;
-//     display: block;
-//     max-width: 320px;
-//     input[type="text"],
-//     input[type="email"], 
-//     input[type="submit"],
-//     select,
-//     textarea {
-//         display: block;
-//         width: 100%;
-//         &.half {
-//             width: 48%;
-//             float: left;
-//             &.left {
-//                 margin-right: 2%;
-//             }
-//             &.right {
-//                 margin-left: 2%;
-//             }
-//         }
-//     }
-//     input[type="submit"] {
-//         padding: 16px;
-
-//         background: rgb(81,156,247); /* Old browsers */
-//         background: -moz-linear-gradient(top,  rgba(81,156,247,1) 0%, rgba(76,107,232,1) 100%); /* FF3.6+ */
-//         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(81,156,247,1)), color-stop(100%,rgba(76,107,232,1))); /* Chrome,Safari4+ */
-//         background: -webkit-linear-gradient(top,  rgba(81,156,247,1) 0%,rgba(76,107,232,1) 100%); /* Chrome10+,Safari5.1+ */
-//         background: -o-linear-gradient(top,  rgba(81,156,247,1) 0%,rgba(76,107,232,1) 100%); /* Opera 11.10+ */
-//         background: -ms-linear-gradient(top,  rgba(81,156,247,1) 0%,rgba(76,107,232,1) 100%); /* IE10+ */
-//         background: linear-gradient(to bottom,  rgba(81,156,247,1) 0%,rgba(76,107,232,1) 100%); /* W3C */
-//         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#519cf7', endColorstr='#4c6be8',GradientType=0 ); /* IE6-9 */
-
-//         border-color: darken(rgb(79,161,242), 20%);
-//         font-size: 110%;
-//     }
-//     div {
-//         margin-bottom: 0;
-//     }
-//     .logos {
-//         img {
-//             margin-left: 8px;
-//             border: 1px solid #ddd;
-//             padding: 4px;
-//             border-radius: 4px;
-//         }
-//     }
-// }
-
-.contact {
-    margin-top: 40px;
-}
-
-.modal.contact {
-    input[type="email"] {
-        border-color: #ddd;
-        &:focus {
-            border-color: #aaa;
-        }
-    }
+    input[type="text"],
+    input[type="email"],
     input[type="submit"] {
-        background: $button-background;
-        border-color: $button-background;
-        &:hover {
-            background: $button-background-hover;
-            border-color: $button-background-hover;
+        margin-left: 0;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    @media (min-width: 480px) {
+        input[type="text"],
+        input[type="email"],
+        input[type="submit"] {
+            display: inline-block;
+            text-align: left;
+            width: auto;
+        }
+        input[type="submit"] {
+            margin-left: 6px;
+            text-align: center;
         }
     }
 }
@@ -234,27 +190,42 @@ form {
     height: $hero-height + 20px;
     box-sizing: border-box;
     @if $hero-background-image == T {
-        background: $hero-image no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;        
+        background: $hero-image no-repeat top; 
+        -webkit-background-size: $hero-background-size;
+        -moz-background-size: $hero-background-size;
+        -o-background-size: $hero-background-size;
+        background-size: $hero-background-size; 
     } else {
         background: $hero-background-color;
     }
-    padding-top: 20px;
-    padding-bottom: 50px;
+
+    padding: $hero-padding;
     color: $hero-color;
-    // position: relative;
-    // left: -5%;
-    // top: -20px;
 }
-.hero-header {
-    margin-top: $hero-header-top;
+
+h1.hero-header {
+    color: #505254;
+    span {
+        color: #616365;
+        font-size: 18px;
+        display: block;
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 24px;
+        margin-bottom: 60px;
+        line-height: 1.4em;
+        @media (min-width: 768px) {
+            font-size: 24px;
+        }
+    }
 }
 .hero-container {
     overflow: hidden;
     position: relative;
+    @if $fixed-nav == T {
+        margin-top: $nav-height;
+    }
 }
 .hero-content {
     @if $fading-hero == T {
@@ -288,9 +259,6 @@ form {
 .hero-image {
     display: none;
 }
-// .bigger {
-//     transform: scale(1.2);
-// }
 
 .section {
 	padding: $section-padding 0;
@@ -306,21 +274,30 @@ form {
 
 .logo {
     text-align: left;
+    img {
+        margin-top: 2px;
+    }
+    span {
+        font-family: "Quicksand", sans-serif;
+        font-size: 18px;
+        color: #a1a3a3;
+        position: relative;
+        top: 2px;
+        margin-left: 4px;
+        display: none;
+    }
 }
 
 .menu {
     text-align: right;
-    margin-top: 2px;
-    @media (min-width: 450px) {
+    margin-top: 8px;
+    @media (min-width: 768px) {
         margin-bottom: 0;
     }
     a {
-        display: block;
+        // display: block;
         margin-left: $nav-link-margin;
         margin-bottom: 14px;
-        @media (min-width: 450px) {
-            display: inline-block;
-        }
         text-transform: uppercase;
         font-size: $nav-link-font-size;
         letter-spacing: 1px;
@@ -330,11 +307,11 @@ form {
 }
 
 .nav {
-    padding: $nav-padding / 2;
+    padding: $nav-padding;
     background: $nav-background;
     box-sizing: border-box;
     color: $nav-link-color;
-    @media (min-width: 35em) {
+    @media (min-width: 768px) {
         padding: $nav-padding;
     }
     .container {
@@ -355,7 +332,8 @@ form {
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 999;
+        box-shadow: 0 0 4px rgba(0,0,0,.15);
     }
 }
 
@@ -389,77 +367,22 @@ img {
 }
 
 // skeleton grid extra styles
-
-.row {
-    margin-bottom: 5%;
+.row .columns {
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .row .columns {
+        text-align: left;
+        h2 {
+            margin-top: 0;
+        }
+    }
 }
 
-
-    // to make 2 columsn on mobile...
-// .half-mobile {
-//     width: 46%;
-// }
-
-// .column.half-mobile,
-// .columns.half-mobile {
-// margin-left: 2%;
-// margin-right: 2%; }
-
-// contact modal 
-
-.modal-overlay {
-    background: #000;
-    position: fixed;
-    opacity: 0.8;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    z-index: 2;
-
-}
-
-.modal {
-    background: transparent;
-    width: 90%;
-    // max-width: 450px;
-    margin: 0 auto;
-
-    position: fixed;
-
-    z-index: 100;
-    top: 50%;
-    left: 50%;
-
-    border-radius: $border-radius;
-
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-    box-sizing: border-box;
-
-}
-
-// @media (max-width: 768px) {
-
-//     .modal-button {
-//         top: 8px;
-//         right: 8px;
-//         padding: 6px;
-//         font-size: 80%;
-//     }
-//     .modal {
-//         max-height: 320px;
-//         overflow: scroll;
-//     }
-// }
-
-.bottom-image {
-    background-image: url(../img/purple-flowers.jpg); 
-    background-size: cover;
+.row.reverse {
+    div.columns:nth-child(1) {
+        float: right;
+    }
 }
 
 .button {
@@ -484,47 +407,14 @@ img {
     text-align: center;
 }
 
-.social {
-    padding: 80px 0 120px 0;
-    margin: 0 auto;
-
-    a {
-        text-decoration: none;
-    }
-    .group {
-        padding-top: 20px;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-}
-
-
-
-.insta-button {
-
-    border: 1px solid #bcbcbc;
-    border-radius: 3px;
-    padding: 4px;
-    padding-top: 3px;
-    font-size: 11px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    &:hover {
-        border-color: #ddd;
-    }
-    span {
-        position: relative;
-        top: 1px;
-    }
-    // img {
-    //     width: 13px;
-    // }
-}
-
 .footer {
-    padding: 20px;
-    background: $light-gray;
+    padding: 80px;
+    a.social-button {
+        opacity: .8;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
 
@@ -544,149 +434,72 @@ img {
     }
 }
 
-.inline {
-    div {
-        display: inline-block;
-    }
-}
-
-// Example Pop-ups
-.browser-window {
-    max-width: 1080px;
-    margin: 0 auto;
-    .browser-nav {
-        background: #e2e4e6;
-        padding: 12px;
-        border-radius: 10px 10px 0 0;
-        .circles, .tabs {
-            display: inline-block;
-        }
-        .circle {
-            display: inline-block;
-            height: 12px;
-            width: 12px;
-            border-radius: 100%;
-            margin-right: 5px;
-            &.red {
-                background: red;
-            }
-            &.orange {
-                background: orange;
-            }
-            &.green {
-                background: green;
-            }
-        }
-        .tab {
-            display: inline-block;
-            border-radius: 8px 8px 0 0;
-            border: 1px solid gray;
-            border-bottom: none;
-            padding: 4px 12px;
-            margin-right: 2px;
-        }
-        // .arrow-container {
-        //     margin-top: 10px;
-        // }
-        // .arrow {
-        //     display: inline-block;
-        //     width: 24px;
-        //     margin-right: 4px;
-        //     img {
-        //         margin-top: -3px;
-        //     }
-        // }
-    }
-    iframe {
-        width: 100%;
-        border: none;
-        height: 500px;
-        border-radius: 0 0 4px 4px;
-    }
-}
-
-.parallax-computer {
-    position: static;
-    // width: 980px;
-    width: 100%;
-    right: 43%;
-}
-.parallax-phone {
-    position: static;
-    width: 100%;
-    right: -35%;
-    img {
-        margin-top: 75px;
-    }
-}
-@media (min-width: 35em) {
-    .parallax-computer {
-        width: 980px;
-        position: absolute;
-    }
-    .parallax-phone {
-        position: absolute;
-    }
-
-}
-@media (min-width: 1400px) {
-    .parallax-computer {
-        right: 46%;
-    }
-    .parallax-phone {
-        right: -42%;
-        img {
-            margin-top: 0;
-        }
-    }
-}
-#about {
-    position: relative;
-    // overflow: hidden;
-}
-@media (min-width: 35em) {
-    #about {
-        overflow: hidden;
-    }
-}
-
 .sign-up p {
     margin-bottom: 8px;
 }
 
-// .parallax-outer {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-// }
+.feature-box {
+    margin: 24px 0;
+    h3 {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #555;
+    }
+    p {
+        font-size: 16px;
+        color: #777;
+        max-width: 200px;
+        margin: 0 auto;
+        line-height: 1.5em;
+    } 
+}
 
-// ==========================================================================
-//    EXAMPLE Media Queries for Responsive Design.
-//    These examples override the primary ('mobile first') styles.
-//    Modify as content requires.
-//    ==========================================================================
+.pricing-table {
+    margin: 0 auto 60px auto;
+    max-width: 400px;
+    .price {
+        display: block;
+        text-align: center;
+        padding: 24px 0 12px 0;
+        span {
+            background: $primary-color;
+            color: #fff;
+            font-weight: bold;
+            padding: 6px 12px;
+            display: inline-block;
+            border-radius: 40px;
+            &.red {
+                background: #FA6765;
+            }
+            &.yellow {
+                background: #FFDA49;
+            }
+        }
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        border: $light-border;
+        border-radius: 2px;
+        padding: 20px;
+        font-size: 18px;
+        line-height: 2.4em;
+        li {
+            span {
+                display: block;
+                font-size: 80%;
+                line-height: .5em;
+                color: #999;
+            }
+        }
+    }
+}
 
 .desktop {
-    display: none;
+    // display: none !important;
 }
-
-@media only screen and (min-width: 35em) {
-    // Style adjustments for viewports that meet the condition
-    // .parallax-computer,
-    // .parallax-phone,
-    .hero-image {
-        // position: static;
-        display: block;
-    }
-    .desktop {
-        display: inline-block;
-    }
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    // Style adjustments for high resolution devices
+@media (min-width: 768px) {
+    display: inherit;
 }

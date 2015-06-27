@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Workweek</title>
-        <meta name="description" content="Simpler self-employment. Get Workweek and create a website with built-in invoicing and payment processing. ">
+        <title>Workweek | Coming Soon</title>
+        <meta name="description" content="Workweek is the first e-commerce website platform built for service professionals.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -34,13 +34,12 @@
         <div class="nav group">
             <div class="container">
                 <div class="logo group-column">
-                    <img src="img/logo.png">
-                    <span>workweek</span>
+                    <img src="img/logo.png" width="140">
                 </div>
                 <div class="menu group-column right">
-                    <a href="#about" class="desktop">About</a>
-                    <a href="http://blog.getworkweek.com">Blog</a>
-                    <a href="#signup">Sign up</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="http://blog.getworkweek.com" target="_blank">Blog</a>
                 </div>
             </div>
         </div>
@@ -51,8 +50,11 @@
             <div class="hero" id="hero">
             <div class="hero-content">
                 <div class="row">
-                    <div class="center-text" style="position: relative; z-index: 1;">
-                        <h1 class="hero-header">Simpler self-employment. <br/><span>Get a free website with built-in invoicing and payment processing. Coming soon.</span></h1>
+                    <div class="ten columns" style="position: relative; z-index: 1;">
+                        <h1 class="hero-header">Websites for people <br class="desktop"> who love what they do</h1>
+                        <div class=""><h3 style="max-width: 520px">Workweek takes the stress out of being self-employed. Sign up for a free account. </h3></div>
+<!--                         <div class="sign-up"><p>Get a free account when Workweek goes live.</p></div> -->
+                        
 
                         <!-- Track which signup form is used: http://blog.mailchimp.com/tracking-signup-pages-via-the-mailchimp-embedded-forms/?_ga=1.77614352.542638431.1430247002 -->
 
@@ -64,8 +66,8 @@
                             
                         <div class="mc-field-group">
                             <!--<label for="mce-EMAIL">Email Address </label>-->
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address" style="">                            
-                            <input type="submit" value="Get Notified" name="subscribe" id="mc-embedded-subscribe" class="button">
+                            <input type="email" value="" name="EMAIL" class="required email combined" id="mce-EMAIL" placeholder="Email address" style="">                            
+                            <input type="submit" value=">" name="subscribe" id="mc-embedded-subscribe" class="button combined">
 
                         </div>
                         <!-- hidden input for location -->
@@ -83,7 +85,9 @@
 
 
                     </div>
-
+                    <div class="five columns hero-image" style="position: absolute; left: 52%; top: 3%;">
+                        <img src="img/yoga-teacher.jpg" style="max-width: 410px">
+                    </div>
                 </div>
             </div>
             </div>
@@ -92,115 +96,83 @@
         <!-- main content area -->
         <div class="main">
 
-            <div class="section" id="about">
-                <div class="container">
-                    <div class="row center-text">
-                        <div class="three columns">
-                            <div class="feature-box">
-                                <img src="img/icon-free-website.png">
-                                <h3>Website</h3>
-                                <p>Present yourself and your skills with a professionally designed website. </p>
+            <div class="section" style="display: none;">
+                <div class="logo">
+                </div>
+                <form class="payment">
+<!--                     <img src="https://d13yacurqjgara.cloudfront.net/users/8744/screenshots/1776808/danckut_s-dribble-bw_1x.png"> -->
+                    <div class="center-text" style="padding: 10px;font-size: 90%; font-weight: bold;">HAIR BY JULES</div>
+                    <div class="center-text" style="padding: 20px;font-size: 120%">For your hair appointment, today.</div>
+                    <input type="email" placeholder="email">
+                    <input type="text" placeholder="card number">
+                    <div class="group">
+                        <input type="text" placeholder="mm / yy" class="half left">
+                        <input type="text" placeholder="cvv" class="half right">
+                    </div>
+                    <input type="submit" value="Pay $40.00">
+                    <hr style="border-color: #ccc; margin: 34px 0px 20px 0;">
+                    <div class="group">
+                        <div class="group-column left">
+                            <span style="font-size: 80%; color: #888">OTHER PAYMENT OPTIONS</span>
+                        </div>
+                        <div class="group-column right logos" style="margin-top: -8px;">
+                            <img width="30" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fbrand.venmo.com%2Fimg%2Flogo-mark.png&f=1">
+                            <img width="30" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.underconsideration.com%2Fbrandnew%2Farchives%2Fpaypal_2014_logo_detail.png&f=1">
+                            <img width="30" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fearn-bitcoins.com%2Fimages%2Fbitcoin-logo-plain.png&f=1">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <div id="about">
+
+                <div class="section color">
+
+                    <div id="parallax1" class="parallax-computer">
+                        <img src="img/macbook-website-example2.png" width="980">
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="six columns offset-by-six">
+                                <h2>Being self-employed should be fun.  </h2>
+                                <p>Workweek is an easy way for photographers, designers, yoga or piano teachers, and the fearless self-employed everywhere who use their skills to pay the bills.</p>
+                                <div class="button example1 outline desktop">
+                                    See Example
+                                </div>
                             </div>
                         </div>
-                        <div class="three columns">
-                            <div class="feature-box">
-                                <img src="img/icon-appointments.png">
-                                <h3>Appointments</h3>
-                                <p>Get leads through a contact form on your website, and set up a time to meet. </p>
-                            </div>
-                        </div>
-                        <div class="three columns">
-                            <div class="feature-box">
-                                <img src="img/icon-invoicing.png">
-                                <h3>Invoicing</h3>
-                                <p>Create and send professional invoices to your clients. </p>
-                            </div>
-                        </div>
-                        <div class="three columns">
-                            <div class="feature-box">
-                                <img src="img/icon-payment-processing.png">
-                                <h3>Payments</h3>
-                                <p>Get paid easily online. One-time or recurring payments, no problem. </p>
+                    </div>
+                </div>
+
+                <div class="section">
+
+                    <div id="parallax2" class="parallax-phone">
+                        <img src="img/iphone2.png" width="">
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="six columns">
+                                <h2>Built-in scheduling and payment processing.  </h2>
+                                <p>No more managing third-party software integrations. You can schedule appointments, create invoices, and get paid through your website. Workweek is the first e-commerce platform built with service professionals in mind.</p>
+<!--                                 <div class="button red">
+                                    Free Account
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="section gray">
-                <div class="container">
-                    <div class="row">
-                        <div class="seven columns">
-                            <img src="img/macbook-website-example2.png">
-                        </div>
-                        <div class="five columns">
-                            <h2>Create a website</h2>
-                            <p>Workweek is the easiest way to build a beautiful portfolio website.  Just choose one of our professionaly designed templates and add your content and style.  It’s very, very easy and it’s a great way to showcase your work and market your skills online. </p>
-                        </div>
-                    </div>
-                    <div class="row reverse">
-                        <div class="seven columns" style="text-align: center;">
-                            <img src="img/iphone3.png" width="400">
-                        </div>
-                        <div class="five columns">
-                            <h2>Get Paid</h2>
-                            <p>The biggest stress of self-employment is getting paid.  We're sure your clients mean well, but paying with cash or checks is hard.  Stop sending invoices that get lost and never paid.  Workweek makes getting paid dead simple by allowing you to send payable online invoices. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="section">
-                <div class="container">
-                    <div class="row center-text">
-                        <div class="eight columns offset-by-two">
-                            <h2>Features & Pricing</h2>
-                            <p>We’re on a mission to make self-employment simple and enjoyable for everyone.  Your free account will be free forever, and includes a website, invoicing, and payment processing.  From there, we will continue to add features to paid accounts that are useful for freelancers and small businesses. </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="pricing-table">
-                            <div class="price">
-                                <span class="red">Free</span>
-                            </div>
-                            <ul>
-                                <li>Website & hosting</li>
-                                <li>Invoicing</li>
-                                <li>
-                                    Payment processing
-                                    <span>2.9% + $.30 transaction fee</span>
-                                </li>
-
-                            </ul>
-                            <div class="price">
-                                <span>$4/mo</span>
-                            </div>
-                            <ul>
-                                <li>Add a custom domain name</li>
-                            </ul>
-                            <div class="price">
-                                <span class="yellow">$8/mo</span>
-                            </div>
-                            <ul>
-                                <li>All other features + </li>
-                                <hr>
-                                <li>File transfer on payment</li>
-                                <li>More features to come</li>
-                            </ul>
-                            <p style="max-width: 300px; margin: 20px auto; text-align: center;">Have a feature you want to see?  <br />Sign up for early access below and help us build the perfect product for you. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section center-text gray" id="signup">
+            <div class="section center-text gray">
                 <div class="container">
                     <div class="row">
                         <div class="eight columns offset-by-two">
-                            <h2>Sign up for early access</h2>
-                            <p>Sign up to get notified when Workweek is live. By signing up for early access, you can help us shape the direction of the product, and help us build the perfect solution for you and for millions of self-employed people like you. </p>
-                            <br />
-                            <br />
+                            <h2>Get Yours</h2>
+                            <p>Sign up to get a free account when Workweek goes live. Your free account will be free forever, with the option to upgrade later for premium features like a custom domain name and unlimited website pages.</p>
 
 
                         <!-- Begin MailChimp Signup Form -->
@@ -210,8 +182,8 @@
                             
                         <div class="mc-field-group">
                             <!--<label for="mce-EMAIL">Email Address </label>-->
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address" style="">                            
-                            <input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button">
+                            <input type="email" value="" name="EMAIL" class="required email combined" id="mce-EMAIL" placeholder="Email address" style="">                            
+                            <input type="submit" value=">" name="subscribe" id="mc-embedded-subscribe" class="button combined">
 
                         </div>
                         <!-- hidden input for location -->
@@ -233,8 +205,51 @@
                 </div>
             </div>
 
+            <div class="section" id="contact">
+                <div class="container center-text">
+                    <div><p>Need a website right now or want to sign up for our beta? <br>Have any questions about Workweek? <br>Contact us on <a href="http://twitter.com/workweeksites" target="_blank">Twitter</a>.</p></div>
+                </div>
+            </div>
+
+<!--             <div class="section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="six columns">
+                            <h2>Need a website right now?</h2>
+                            <p>If you need a website before the Workweek e-commerce platform launches, we can build one for you!</p>
+                            <p>Just choose one of our unique templates, send us your content, and we'll have a website ready in one week. Once you approve it, it's just $100 for the completed website and your first year of <a href="">hosting.</a></p>
+                            <p>Templates</p>
+                            <div class="inline">
+                                <div class="">Yogi Bear</div>
+                                <div class="">Photosynthesis</div>
+                                <div class="">Maximus</div>
+                                <div class="">Minimalist</div>
+                            </div>
+                        </div>
+                        <div class="five columns offset-by-one">
+                            <form class="contact">
+                                <input type="text" placeholder="name">
+                                <input type="email" placeholder="email">
+                                <select>
+                                    <option>Template</option>
+                                    <option>Template 2</option>
+                                    <option>Template 3</option>
+                                </select>                      
+                                <textarea placeholder="any comments or questions?*"></textarea>
+                                <div class="">
+                                    <input type="checkbox">
+                                    <label>I am a human, not a robot.</label>
+                                </div>   
+                                <input type="submit" value="send">
+                                <div>*upon submitting this form, we will send an email with instructions for providing us with your website's content.</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
             <div class="section footer center-text">
-                <a href="//twitter.com/workweeksites" class="social-button"><img src="img/twitter.png"></a>
+                <span>Make your own Workweek</span>
             </div>
 
         <!-- contact modal -->
