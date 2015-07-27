@@ -1,1 +1,0 @@
-$(document).ready(function(){$(".modal-button").click(function(){$(".modal-overlay, .modal").fadeIn(200,function(){$(".modal-overlay, .modal").css("display","block")})}),$(".modal-overlay").click(function(){$(".modal-overlay, .modal").fadeOut(200,function(){$(".modal-overlay, .modal").css("display","none")})})});
