@@ -166,6 +166,10 @@ form {
         display: block;
         text-align: center;
         width: 100%;
+        &.domain {
+            display: inline-block;
+            width: 50%;
+        }
     }
 
 
@@ -176,6 +180,7 @@ form {
             display: inline-block;
             text-align: left;
             width: auto;
+            max-width: 200px;
         }
         input[type="submit"] {
             margin-left: 6px;
@@ -183,6 +188,24 @@ form {
         }
     }
 }
+
+.workweek-url {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    left: -4px;
+    padding: 14px;
+    font-family: "Quicksand";
+    font-size: 14pt;
+    color: #777;
+    border-left: 1px solid #eee;
+    background-color: #FFFFFF;
+}
+
+
 
 // Hero
 

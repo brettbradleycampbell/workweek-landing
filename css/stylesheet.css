@@ -497,16 +497,37 @@ form input[type="submit"] {
   display: block;
   text-align: center;
   width: 100%; }
+  form input[type="text"].domain,
+  form input[type="email"].domain,
+  form input[type="submit"].domain {
+    display: inline-block;
+    width: 50%; }
 @media (min-width: 480px) {
   form input[type="text"],
   form input[type="email"],
   form input[type="submit"] {
     display: inline-block;
     text-align: left;
-    width: auto; }
+    width: auto;
+    max-width: 200px; }
   form input[type="submit"] {
     margin-left: 6px;
     text-align: center; } }
+
+.workweek-url {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+  left: -4px;
+  padding: 14px;
+  font-family: "Quicksand";
+  font-size: 14pt;
+  color: #777;
+  border-left: 1px solid #eee;
+  background-color: #FFFFFF; }
 
 .hero {
   height: auto20px;
