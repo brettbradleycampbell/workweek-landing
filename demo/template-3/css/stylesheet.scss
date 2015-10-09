@@ -1,0 +1,405 @@
+// fonts
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic);
+
+// =========
+// variables
+// =========
+
+// colors
+$purple: #C5A714;
+
+$selection-background: #b3d4fc; // default: #b3d4fc
+$button-background: transparent;
+$button-background-hover: $purple;
+
+$link-color: #999;
+$link-color-hover: $purple;
+
+// HTML defaults
+$default-color: #313349;
+$default-font-size: 1em;
+$default-line-height: 1.4em;
+
+// other
+$section-padding: 40px;
+$light-border: 1px solid #e9eaec;
+$border-radius: 2px;
+
+$hero-height: 300px;
+
+$container-max-width: 900px;
+
+// Header
+$header-font-size: 20pt;
+
+// Nav Menu
+$menu-font-size: 10pt;
+$menu-font-color: #999;
+$menu-font-color-hover: darken($menu-font-color, 20%);
+
+// Buttons
+$button-padding: 12px 24px;
+$button-color: #fff;
+$button-border: 1px solid #fff;
+
+//
+// import partials
+//
+
+@import "normalize.scss";
+@import "html5bp.scss";
+@import "skeleton.scss";
+
+
+/* Stylesheet */
+
+// ===
+// CSS 
+// ===
+body {
+    font-family: "Lora";
+    margin-top: 140px;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+h2 {font-size: 16pt;}
+
+html {
+    font-size: 12pt;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+p {
+    line-height: 1.8em;
+    color: #414345;
+}
+
+a {
+    text-decoration: none;
+    color: $link-color;
+    &:hover {
+        color: $link-color-hover;
+    }
+}
+
+.section {
+    margin: 0 auto;
+}
+
+.hero-container {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.hero {
+    height: $hero-height + 20px;
+    box-sizing: border-box;
+    background-image: url(../img/cup-steam.jpg);
+    background-size: cover;
+    background-position: center 50%;
+
+    width: 110%;
+    position: relative;
+    left: -5%;
+    top: -20px;
+
+}
+
+// HEADER
+.header {
+    padding: 32px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+}
+h1.logo {
+    color: #fff;
+}
+.nav {
+    text-align: right;
+    .nav-menu {
+        font-family: arial, sans-serif;
+        a {
+            display: block;
+            padding: 8px;
+            margin-left: 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: $menu-font-size;
+            color: $menu-font-color;
+            &:hover {
+                color: $menu-font-color-hover;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .header {
+        padding: 48px 40px;
+    }
+    .nav {
+        .nav-menu a {
+            display: inline-block;
+        }
+    }
+}
+
+// // PORTFOLIO 
+
+.portfolio .four.columns {
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.project-title {
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+
+    background: #333;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding-top: 30%;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+
+    &:hover {
+        opacity: 1;
+    }
+
+}
+
+.thumbnail:hover + .project-title {
+    opacity: 1;
+}
+
+// PROJECT PAGE
+.project-images {
+    text-align: center;
+}
+.project-description {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+// ABOUT
+.section.about {
+    max-width: 600px;
+    padding-bottom: 40px;
+}
+.about-image {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.about-text {
+    padding-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .desktop-table {
+        display: table;
+        .table-row {display: table-row}
+        .table-cell {display: table-cell}
+    }
+}
+.about .desktop-table {
+    width: 90%;
+    margin: 42px auto;
+}
+.about .table-cell {
+    vertical-align: top;
+    padding: 20px;
+}
+
+// CONTACT
+
+.section.contact {
+    max-width: 400px;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.contact form  {
+    input[type="email"], 
+    input[type="text"], 
+    input[type="submit"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 1px;
+        border: 1px solid #ccc;
+        background: transparent;
+        margin-bottom: 1em;
+
+        box-sizing: border-box;
+
+        -webkit-transition: border .3s;
+        color: $purple;
+
+        &:focus {
+            outline: none;
+            border-color: $purple;
+        }
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        padding: 4px 0;
+        color: #777;
+    }
+
+    input[type="submit"] {
+        border-color: $purple;
+        background: $purple;
+        color: #fff;
+        &:hover {
+            background: darken($purple, 10%);
+            border-color: darken($purple, 10%);
+        }
+    }
+}
+
+// FOOTER
+.footer {
+    padding: 24px 0;
+    color: #a1a3a4;
+    font-size: 11pt;
+    text-align: center;
+}
+
+//////////////  //
+//   ELEMENTS  //
+////////////  //
+
+// BUTTONS
+.button {
+    background: $button-background;
+    display: inline-block;
+    padding: $button-padding;
+    border-radius: $border-radius;
+    color: $button-color;
+    cursor: pointer;
+    font-size: 12pt;
+    border: $button-border;
+    &:hover {
+        background: $button-background-hover;
+        color: #fff;
+        border-color: $button-background-hover;
+    }
+}
+
+// FORMATTING
+
+.center-text {text-align: center;}
+.right-text {text-align: right;}
+
+// need this?
+.group {
+    content: "";
+    display: table;
+    width: 100%;
+    text-align: center;
+    &:after {
+        clear: both;
+    }
+    &.three .float {
+        width: 33.333333333%;
+    }
+    .float {
+        float: left;
+    }
+}
+ul.reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// New grid
+.thumbnail {
+    display: block;
+    width: 100%;
+    padding-bottom: 66%;
+    background-size: 100%;
+    background-position: center center;
+    background-image: url(http://www.yeahbutscience.com/wp-content/uploads/2015/09/1200px-1e0657_scale.jpg);
+
+    -webkit-transition: transform 1s;
+    transition: transform 1s;
+
+    &:hover {
+        -ms-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02);
+    }
+}
+
+
+.portfolio {
+    padding: 0 40px;
+    .every-page {
+        margin-top: 0;
+    }
+}
+hr {border-color: #37373b}
+.gallery {
+    padding: 40px 40px 0 40px;
+    a {
+        margin-bottom: 8%;
+    }
+}
+
+.project-images img {
+    margin-bottom: 10%;
+}
+
+
+// ==========================================================================
+//    EXAMPLE Media Queries for Responsive Design.
+//    These examples override the primary ('mobile first') styles.
+//    Modify as content requires.
+//    ==========================================================================
+
+@media only screen and (min-width: 35em) {
+    // Style adjustments for viewports that meet the condition
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    // Style adjustments for high resolution devices
+}
+
+
+

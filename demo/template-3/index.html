@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Workweek Template: Anna James</title>
+    <meta name="description" content="Workweek lets you build your own portfolio with built-in invoicing and payment processing. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+
+    <!-- MAIN BODY -->
+    <div class="main">
+
+      <video autoplay loop muted poster="polina.jpg" id="bgvid">
+<!--           <source src="polina.webm" type="video/webm"> -->
+          <source src="bg-video.mp4" type="video/mp4">
+      </video>
+
+      <div class="bg-overlay">
+      </div>
+
+      <style>
+        video#bgvid { 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url(polina.jpg) no-repeat;
+            background-size: cover; 
+        }
+        .bg-overlay {
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: transparent;
+          background: rgba(0,0,0,.6);
+          z-index: -99;
+        }
+      </style>
+
+      <div class="center-text">
+        <h1 class="logo">Vladimir Artemyev</h1>
+        <a href="project-1.html" class="button">View Work</a>
+      </div>
+
+
+    </div> <!-- /MAIN -->
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="container">
+        Copyright Anna James, 2015.
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+      
+      <!-- CODROPS GRID -->
+    <script src="js/codrops-grid/masonry.pkgd.min.js"></script>
+    <script src="js/codrops-grid/imagesloaded.js"></script>
+    <script src="js/codrops-grid/classie.js"></script>
+    <script src="js/codrops-grid/AnimOnScroll.js"></script>
+    <script>
+      new AnimOnScroll( document.getElementById( 'grid' ), {
+        minDuration : 0.4,
+        maxDuration : 0.7,
+        viewportFactor : 0.2
+      } );
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXX-XXXX','auto');ga('send','pageview');
+    </script>
+
+  </body>
+</html>
