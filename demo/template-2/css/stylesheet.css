@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -427,7 +428,8 @@ html {
   font-size: 12pt; }
 
 body {
-  background: #f7f7f7; }
+  background: #f7f7f7;
+  font-family: "Lato"; }
 
 p {
   line-height: 1.8em;
@@ -440,23 +442,28 @@ p {
   box-sizing: border-box;
   z-index: -1; }
 
+.contact label {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: #777; }
+
 .contact input[type="email"],
 .contact input[type="text"],
-.contact input[type="submit"] {
+.contact input[type="submit"],
+.contact textarea {
   width: 100%;
-  max-width: 350px;
   padding: 12px;
-  border-radius: 4px;
-  border: 1px solid #fff;
+  border-radius: 2px;
+  border: 1px solid #a1a3a5;
   background: transparent;
-  text-align: center;
   margin-bottom: 1em;
   box-sizing: border-box;
   -webkit-transition: all .3s;
   color: #8854B2; }
   .contact input[type="email"]:focus,
   .contact input[type="text"]:focus,
-  .contact input[type="submit"]:focus {
+  .contact input[type="submit"]:focus,
+  .contact textarea:focus {
     outline: none;
     border-color: #8854B2; }
 .contact input[type="submit"] {
@@ -495,20 +502,24 @@ p {
   padding: 32px 0; }
 
 .logo {
-  padding-bottom: 24px; }
+  padding-bottom: 12px; }
+  .logo a {
+    text-decoration: none;
+    color: #313349; }
   .logo h1 {
     font-size: 1.5em; }
 
 .nav .nav-menu a {
-  display: block;
+  display: inline-block;
   padding: 8px;
-  margin: 0 8px;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 10pt;
-  color: #999; }
+  font-size: 12pt;
+  color: #888; }
   .nav .nav-menu a:hover {
-    color: #666666; }
+    color: #555555; }
+
+.social-icons {
+  margin-top: 20px; }
 
 ul.reset {
   margin: 0;
@@ -549,12 +560,6 @@ ul.portfolio-grid img {
 .about .table-cell {
   vertical-align: top;
   padding: 20px; }
-
-.footer {
-  padding: 24px 0;
-  background: #F0EFF0;
-  color: #717375;
-  font-size: 11pt; }
 
 .button {
   background: #EF6F79;
@@ -613,22 +618,38 @@ ul.portfolio-grid img {
   .group .float {
     float: left; }
 
+.page-content {
+  padding: 40px;
+  max-width: 600px; }
+
+.contact-page {
+  padding: 40px;
+  max-width: 600px; }
+
 @media only screen and (min-width: 720px) {
   .header.sidebar {
     float: left;
     position: fixed;
-    width: 300px; }
+    width: 260px;
+    padding-left: 24px;
+    box-sizing: border-box; }
 
   .main {
-    margin-left: 280px;
+    margin-left: 260px;
     background: #fff; }
 
   ul.portfolio-grid {
-    padding: 40px 0;
+    padding: 40px 0 0 20px;
     font-size: 0; }
     ul.portfolio-grid li {
       display: inline-block;
-      margin: 4px; }
+      margin: 12px; }
       ul.portfolio-grid li img {
         max-width: none;
-        max-height: 200px; } }
+        max-height: 280px; } }
+.page-container {
+  padding: 40px; }
+  .page-container img {
+    margin-bottom: 40px; }
+
+/*# sourceMappingURL=stylesheet.css.map */

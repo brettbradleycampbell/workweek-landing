@@ -496,7 +496,8 @@ a {
     display: inline-block; } }
 .project-title {
   text-align: center;
-  padding: 10px; }
+  padding: 10px;
+  display: none; }
 
 .project-images {
   text-align: center; }
@@ -612,3 +613,5 @@ ul.reset {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+/*# sourceMappingURL=stylesheet.css.map */
