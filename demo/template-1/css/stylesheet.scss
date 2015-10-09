@@ -1,15 +1,15 @@
 // fonts
-// @import url(http://fonts.googleapis.com/css?family=Lora:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic);
 
 // =========
 // variables
 // =========
 
 // colors
-$purple: #8854B2;
+$purple: #333;
 
 $selection-background: #b3d4fc; // default: #b3d4fc
-$button-background: #EF6F79;
+$button-background: #333;
 $button-background-hover: darken($button-background, 10%);
 
 $link-color: #999;
@@ -55,6 +55,10 @@ $button-color: #fff;
 // ===
 // CSS 
 // ===
+body {
+    font-family: "Lora";
+    margin-top: 140px;
+}
 
 img {
     max-width: 100%;
@@ -113,12 +117,18 @@ a {
 
 // HEADER
 .header {
-    padding: 32px 0;
+    padding: 32px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
 }
 .logo {
-    padding-bottom: 24px;
+    text-align: left;
     h1 {
         font-size: $header-font-size;
+        margin: 0;
         a {
             color: #444;
             &:hover {
@@ -128,11 +138,13 @@ a {
     }
 }
 .nav {
+    text-align: right;
     .nav-menu {
+        font-family: arial, sans-serif;
         a {
             display: block;
             padding: 8px;
-            margin: 0 8px;
+            margin-left: 12px;
             text-decoration: none;
             text-transform: uppercase;
             font-size: $menu-font-size;
@@ -146,7 +158,7 @@ a {
 
 @media only screen and (min-width: 480px) {
     .header {
-        padding: 48px 0;
+        padding: 48px 40px;
     }
     .nav {
         .nav-menu a {
@@ -156,20 +168,45 @@ a {
 }
 
 // // PORTFOLIO 
+
+.portfolio .four.columns {
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
 .project-title {
     text-align: center;
-    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
 
-    display: none;
+    background: #333;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding-top: 30%;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+
+    &:hover {
+        opacity: 1;
+    }
+
 }
 
+.thumbnail:hover + .project-title {
+    opacity: 1;
+}
 
 // PROJECT PAGE
 .project-images {
     text-align: center;
-    img {
-        margin-bottom: 60px;
-    }
 }
 .project-description {
     max-width: 640px;
@@ -264,8 +301,9 @@ a {
 // FOOTER
 .footer {
     padding: 24px 0;
-    color: #717375;
+    color: #a1a3a4;
     font-size: 11pt;
+    text-align: center;
 }
 
 //////////////  //
@@ -310,6 +348,44 @@ ul.reset {
     list-style: none;
 }
 
+// New grid
+.thumbnail {
+    display: block;
+    width: 100%;
+    padding-bottom: 66%;
+    background-size: 100%;
+    background-position: center center;
+    background-image: url(http://www.yeahbutscience.com/wp-content/uploads/2015/09/1200px-1e0657_scale.jpg);
+
+    -webkit-transition: transform 1s;
+    transition: transform 1s;
+
+    &:hover {
+        -ms-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02);
+    }
+}
+
+
+.portfolio {
+    padding: 0 40px;
+    .every-page {
+        margin-top: 0;
+    }
+}
+hr {border-color: #37373b}
+.gallery {
+    padding: 40px 40px 0 40px;
+    a {
+        margin-bottom: 8%;
+    }
+}
+
+.project-images img {
+    margin-bottom: 10%;
+}
 
 
 // ==========================================================================

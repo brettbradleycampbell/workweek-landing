@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -417,6 +418,10 @@ textarea {
   clear: both; }
 
 /* Stylesheet */
+body {
+  font-family: "Lora";
+  margin-top: 140px; }
+
 img {
   max-width: 100%; }
 
@@ -442,7 +447,7 @@ a {
   text-decoration: none;
   color: #999; }
   a:hover {
-    color: #8854B2; }
+    color: #333; }
 
 .section {
   margin: 0 auto; }
@@ -466,43 +471,73 @@ a {
   top: -20px; }
 
 .header {
-  padding: 32px 0; }
+  padding: 32px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1; }
 
 .logo {
-  padding-bottom: 24px; }
+  text-align: left; }
   .logo h1 {
-    font-size: 20pt; }
+    font-size: 20pt;
+    margin: 0; }
     .logo h1 a {
       color: #444; }
       .logo h1 a:hover {
-        color: #8854B2; }
+        color: #333; }
 
-.nav .nav-menu a {
-  display: block;
-  padding: 8px;
-  margin: 0 8px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 10pt;
-  color: #999; }
-  .nav .nav-menu a:hover {
-    color: #666666; }
+.nav {
+  text-align: right; }
+  .nav .nav-menu {
+    font-family: arial, sans-serif; }
+    .nav .nav-menu a {
+      display: block;
+      padding: 8px;
+      margin-left: 12px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 10pt;
+      color: #999; }
+      .nav .nav-menu a:hover {
+        color: #666666; }
 
 @media only screen and (min-width: 480px) {
   .header {
-    padding: 48px 0; }
+    padding: 48px 40px; }
 
   .nav .nav-menu a {
     display: inline-block; } }
+.portfolio .four.columns {
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden; }
+
 .project-title {
   text-align: center;
-  padding: 10px;
-  display: none; }
+  opacity: 0;
+  pointer-events: none;
+  background: #333;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding-top: 30%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s; }
+  .project-title:hover {
+    opacity: 1; }
+
+.thumbnail:hover + .project-title {
+  opacity: 1; }
 
 .project-images {
   text-align: center; }
-  .project-images img {
-    margin-bottom: 60px; }
 
 .project-description {
   max-width: 640px;
@@ -557,33 +592,34 @@ a {
   margin-bottom: 1em;
   box-sizing: border-box;
   -webkit-transition: border .3s;
-  color: #8854B2; }
+  color: #333; }
   .contact form input[type="email"]:focus,
   .contact form input[type="text"]:focus,
   .contact form input[type="submit"]:focus,
   .contact form textarea:focus {
     outline: none;
-    border-color: #8854B2; }
+    border-color: #333; }
 .contact form label {
   display: block;
   text-align: left;
   padding: 4px 0;
   color: #777; }
 .contact form input[type="submit"] {
-  border-color: #8854B2;
-  background: #8854B2;
+  border-color: #333;
+  background: #333;
   color: #fff; }
   .contact form input[type="submit"]:hover {
-    background: #6e4291;
-    border-color: #6e4291; }
+    background: #1a1a1a;
+    border-color: #1a1a1a; }
 
 .footer {
   padding: 24px 0;
-  color: #717375;
-  font-size: 11pt; }
+  color: #a1a3a4;
+  font-size: 11pt;
+  text-align: center; }
 
 .button {
-  background: #EF6F79;
+  background: #333;
   display: inline-block;
   padding: 8px 12px;
   border-radius: 2px;
@@ -613,5 +649,36 @@ ul.reset {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  padding-bottom: 66%;
+  background-size: 100%;
+  background-position: center center;
+  background-image: url(http://www.yeahbutscience.com/wp-content/uploads/2015/09/1200px-1e0657_scale.jpg);
+  -webkit-transition: transform 1s;
+  transition: transform 1s; }
+  .thumbnail:hover {
+    -ms-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02); }
+
+.portfolio {
+  padding: 0 40px; }
+  .portfolio .every-page {
+    margin-top: 0; }
+
+hr {
+  border-color: #37373b; }
+
+.gallery {
+  padding: 40px 40px 0 40px; }
+  .gallery a {
+    margin-bottom: 8%; }
+
+.project-images img {
+  margin-bottom: 10%; }
 
 /*# sourceMappingURL=stylesheet.css.map */
