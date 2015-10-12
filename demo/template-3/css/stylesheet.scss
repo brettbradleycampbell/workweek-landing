@@ -6,7 +6,7 @@
 // =========
 
 // colors
-$purple: #C5A714;
+$purple: #E4BF08;
 
 $selection-background: #b3d4fc; // default: #b3d4fc
 $button-background: transparent;
@@ -58,7 +58,6 @@ $button-border: 1px solid #fff;
 // ===
 body {
     font-family: "Lora";
-    margin-top: 140px;
 }
 
 img {
@@ -128,22 +127,40 @@ a {
 h1.logo {
     color: #fff;
 }
-.nav {
-    text-align: right;
-    .nav-menu {
-        font-family: arial, sans-serif;
-        a {
-            display: block;
-            padding: 8px;
-            margin-left: 12px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: $menu-font-size;
-            color: $menu-font-color;
-            &:hover {
-                color: $menu-font-color-hover;
-            }
+.top-logo {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.nav-menu {
+    font-family: arial, sans-serif;
+    a {
+        padding: 8px;
+        margin-left: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $menu-font-size;
+        color: $menu-font-color;
+        &:hover {
+            color: $menu-font-color-hover;
         }
+    }
+}
+
+.menu-icon {
+    padding: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    color: $link-color;
+    &:hover {
+        color: $link-color-hover;
+    }
+    button:focus {
+        outline: none;
+        color: lighten($link-color-hover, 15%);
     }
 }
 
@@ -222,6 +239,13 @@ h1.logo {
 }
 .about-text {
     padding-top: 20px;
+}
+
+.table {
+    display: table;
+    width: 100%;
+    .table-row {display: table-row}
+    .table-cell {display: table-cell}
 }
 
 @media only screen and (min-width: 600px) {
@@ -311,11 +335,17 @@ h1.logo {
     cursor: pointer;
     font-size: 12pt;
     border: $button-border;
+    transition: all .3s;
     &:hover {
         background: $button-background-hover;
         color: #fff;
         border-color: $button-background-hover;
     }
+}
+button.reset {
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
 }
 
 // FORMATTING
@@ -384,6 +414,67 @@ hr {border-color: #37373b}
     margin-bottom: 10%;
 }
 
+
+// 
+.vertical-center {
+
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    left: 0;
+    top: 0;
+
+    .v-middle {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .v-inner {
+        margin-left: auto;
+        margin-right: auto; 
+        width: 100%;
+    }
+
+}
+
+.front-page-content {
+    text-align: center;
+}
+
+.social-icons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    a {
+        margin: 0 8px;
+        transition: color .2s;
+    }
+}
+
+
+.cbp-spmenu {
+    background: #fff;
+    padding: 60px 12px 12px;
+    a {
+        padding: 12px;
+    }
+}
+
+
+.horizontal-portfolio-container {
+    width: 100%;
+    overflow: scroll;
+}
+.horizontal-portfolio {
+    width: 2000%;
+    img {
+        display: inline-block;
+        max-height: 100%;
+    }
+}
 
 // ==========================================================================
 //    EXAMPLE Media Queries for Responsive Design.
