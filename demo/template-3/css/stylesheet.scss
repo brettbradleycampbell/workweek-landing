@@ -131,6 +131,9 @@ h1.logo {
     position: fixed;
     top: 0;
     right: 0;
+    h1 {font-size: 1.2em;}
+    padding: 4px 20px;
+    margin-top: 14px;
 }
 
 .nav-menu {
@@ -467,12 +470,21 @@ hr {border-color: #37373b}
 .horizontal-portfolio-container {
     width: 100%;
     overflow: scroll;
+    vertical-align: top;
+    position: fixed; 
+    top: 120px;
 }
 .horizontal-portfolio {
-    width: 2000%;
+    vertical-align: top;
+    width: 4400px;
+    height: 500px;
+    max-height: 500px;
+    padding-left: 20px;
     img {
+        vertical-align: top;
         display: inline-block;
         max-height: 100%;
+        height: auto;
     }
 }
 

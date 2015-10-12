@@ -1,0 +1,199 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Workweek Template: 3</title>
+    <meta name="description" content="Workweek lets you build your own portfolio with built-in invoicing and payment processing. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Codrops push menu -->
+    <link rel="stylesheet" type="text/css" href="js/push-menu/css/component.css" />
+
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+
+    <link rel="stylesheet" type="text/css" href="css/codrops-grid/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/codrops-grid/component.css" />
+
+    <!-- Stylesheet for Lightbox plugin -->
+    <link rel="stylesheet" href="js/Minimal-jQuery-Image-Gallery-Lightbox-Plugin-maxGallery/css/css.css">
+
+
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body class="cbp-spmenu-push" style="position: static">
+
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <!-- MAIN BODY -->
+    <div class="main">
+
+
+      <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+        <a href="project-1.html">Fashion Editorial</a>
+        <a href="project-2.html">Fashion Advertising</a>
+        <a href="project-3.html">Advertising</a>
+        <a href="project-4.html">Lifestyle</a>
+        <a href="project-5.html">Motion Projects</a>
+        <hr style="margin: 10px 12px; border-color: #888">
+        <a href="contact.html">Contact</a>
+        <div class="social-icons">
+          <a href="https://instagram.com/chrishuntphoto/"><i class="fa fa-instagram"></i></a>
+          <a href="https://twitter.com/chrishuntphoto"><i class="fa fa-twitter"></i></a>
+          <a href="https://vimeo.com/chrishuntphoto"><i class="fa fa-vimeo"></i></a>
+          <a href="https://www.behance.net/chrishuntphoto"><i class="fa fa-behance"></i></a>
+        </div>
+      </nav>
+
+      <div class="menu-icon">
+        <button id="showLeft" class="reset"><i class="fa fa-navicon"></i></button>
+      </div>
+      
+      <div class="top-logo">
+        <h1><a href="index.html">Chris Hunt</a></h1>
+      </div>
+
+
+
+
+
+
+     <!-- CONTACT -->
+      <div class="section contact">
+        <div class="container">
+          <p>I look forward to working together.</p>
+          <form>
+            <label>Name</label>
+            <input type="text">
+            <label>Email</label>
+            <input type="email">
+            <label>Message</label>
+            <textarea></textarea>
+            <input type="submit">
+
+          </form>
+
+        </div>
+      </div>  
+
+
+    </div> <!-- /MAIN -->
+
+    <!-- Scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- CODROPS GRID -->
+    <script src="js/codrops-grid/masonry.pkgd.min.js"></script>
+    <script src="js/codrops-grid/imagesloaded.js"></script>
+    <script src="js/codrops-grid/classie.js"></script>
+    <script src="js/codrops-grid/AnimOnScroll.js"></script>
+    <script>
+      new AnimOnScroll( document.getElementById( 'grid' ), {
+        minDuration : 0.4,
+        maxDuration : 0.7,
+        viewportFactor : 0.2
+      } );
+    </script>
+
+    <!-- Gallery Lightbox plugin -->
+    <script src="js/Minimal-jQuery-Image-Gallery-Lightbox-Plugin-maxGallery/js/js.js"></script>
+
+
+    <!-- CODROPS menu - Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+    <script src="js/push-menu/js/classie.js"></script>
+    <script>
+      var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+        menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+        menuTop = document.getElementById( 'cbp-spmenu-s3' ),
+        menuBottom = document.getElementById( 'cbp-spmenu-s4' ),
+        showLeft = document.getElementById( 'showLeft' ),
+        showRight = document.getElementById( 'showRight' ),
+        showTop = document.getElementById( 'showTop' ),
+        showBottom = document.getElementById( 'showBottom' ),
+        showLeftPush = document.getElementById( 'showLeftPush' ),
+        showRightPush = document.getElementById( 'showRightPush' ),
+        body = document.body;
+
+      showLeft.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+        disableOther( 'showLeft' );
+      };
+      showRight.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuRight, 'cbp-spmenu-open' );
+        disableOther( 'showRight' );
+      };
+      showTop.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuTop, 'cbp-spmenu-open' );
+        disableOther( 'showTop' );
+      };
+      showBottom.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuBottom, 'cbp-spmenu-open' );
+        disableOther( 'showBottom' );
+      };
+      showLeftPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toright' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+        disableOther( 'showLeftPush' );
+      };
+      showRightPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toleft' );
+        classie.toggle( menuRight, 'cbp-spmenu-open' );
+        disableOther( 'showRightPush' );
+      };
+
+      function disableOther( button ) {
+        if( button !== 'showLeft' ) {
+          classie.toggle( showLeft, 'disabled' );
+        }
+        if( button !== 'showRight' ) {
+          classie.toggle( showRight, 'disabled' );
+        }
+        if( button !== 'showTop' ) {
+          classie.toggle( showTop, 'disabled' );
+        }
+        if( button !== 'showBottom' ) {
+          classie.toggle( showBottom, 'disabled' );
+        }
+        if( button !== 'showLeftPush' ) {
+          classie.toggle( showLeftPush, 'disabled' );
+        }
+        if( button !== 'showRightPush' ) {
+          classie.toggle( showRightPush, 'disabled' );
+        }
+      }
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXX-XXXX','auto');ga('send','pageview');
+    </script>
+
+  </body>
+</html>
