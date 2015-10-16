@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,400);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -180,7 +180,7 @@ th {
 
 /*! HTML5 Boilerplate v5.1.0 | MIT License | https://html5boilerplate.com/ */
 html {
-  color: #ccc;
+  color: #313349;
   font-size: 1em; }
 
 ::-moz-selection {
@@ -428,12 +428,13 @@ html {
   font-size: 12pt; }
 
 body {
-  background: #17171B;
-  font-family: "Lato"; }
+  background: #f7f7f7;
+  font-family: "Work Sans";
+  font-weight: 300; }
 
 p {
   line-height: 1.8em;
-  color: #ccc; }
+  color: #414345; }
 
 .hero-container {
   position: fixed;
@@ -442,10 +443,15 @@ p {
   box-sizing: border-box;
   z-index: -1; }
 
-.contact label {
-  display: inline-block;
-  margin-bottom: 4px;
-  color: #777; }
+.contact {
+  max-width: 400px;
+  margin: 0 auto; }
+  .contact label {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 4px;
+    color: #444;
+    font-size: 11pt; }
 
 .contact input[type="email"],
 .contact input[type="text"],
@@ -453,12 +459,11 @@ p {
 .contact textarea {
   width: 100%;
   padding: 12px;
-  border-radius: 2px;
   border: 1px solid #a1a3a5;
   background: transparent;
   margin-bottom: 1em;
   box-sizing: border-box;
-  -webkit-transition: all .3s;
+  -webkit-transition: all .2s;
   color: #8854B2; }
   .contact input[type="email"]:focus,
   .contact input[type="text"]:focus,
@@ -467,12 +472,14 @@ p {
     outline: none;
     border-color: #8854B2; }
 .contact input[type="submit"] {
-  border-color: #8854B2;
-  background: #8854B2;
-  color: #fff; }
+  border-color: #333;
+  background: transparent;
+  color: #333;
+  text-transform: uppercase;
+  padding: 18px; }
   .contact input[type="submit"]:hover {
-    background: #6e4291;
-    border-color: #6e4291; }
+    background: #333;
+    color: #fff; }
 
 .modal.contact input[type="email"],
 .modal.contact input[type="text"] {
@@ -499,25 +506,30 @@ p {
   top: -20px; }
 
 .header {
-  padding: 32px 0;
-  text-align: center; }
+  padding: 32px 0; }
 
 .logo {
-  padding-bottom: 12px; }
+  padding-bottom: 12px;
+  text-align: center; }
   .logo a {
     text-decoration: none;
-    color: #f7f7f7; }
+    color: #313349; }
   .logo h1 {
     font-size: 1.5em; }
 
-.nav .nav-menu a {
-  display: inline-block;
-  padding: 8px;
-  text-decoration: none;
-  font-size: 12pt;
-  color: #888; }
-  .nav .nav-menu a:hover {
-    color: #555555; }
+.nav .nav-menu {
+  text-align: center; }
+  .nav .nav-menu a {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 11pt;
+    color: #555; }
+    .nav .nav-menu a i {
+      font-size: 14pt; }
+    .nav .nav-menu a:hover {
+      color: #888888; }
 
 .social-icons {
   margin-top: 20px; }
@@ -526,9 +538,6 @@ ul.reset {
   margin: 0;
   padding: 0;
   list-style: none; }
-
-ul.portfolio-grid img {
-  max-width: 320px; }
 
 .about-image {
   background-image: url(https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/10881828_1418095115149376_1307186742_n.jpg);
@@ -621,23 +630,28 @@ ul.portfolio-grid img {
 
 .page-content {
   padding: 40px;
-  max-width: 600px; }
+  max-width: 840px;
+  background: #fff; }
 
 .contact-page {
-  padding: 40px;
-  max-width: 600px; }
+  padding: 120px 40px;
+  max-width: 840px;
+  background: #fff; }
+
+.gallery {
+  background: #fff;
+  text-align: center; }
 
 @media only screen and (min-width: 720px) {
   .header.sidebar {
     float: left;
     position: fixed;
     width: 260px;
-    box-sizing: border-box;
-    top: 0; }
+    box-sizing: border-box; }
 
   .main {
     margin-left: 260px;
-    background: #17171B; }
+    background: #fff; }
 
   ul.portfolio-grid {
     padding: 40px 0 0 20px;
@@ -647,33 +661,15 @@ ul.portfolio-grid img {
       margin: 12px; }
       ul.portfolio-grid li img {
         max-width: none;
-        max-height: 280px; } }
+        max-height: 280px; }
+
+  .gallery {
+    text-align: left; }
+    .gallery img {
+      margin: 0; } }
 .page-container {
   padding: 40px; }
   .page-container img {
     margin-bottom: 40px; }
-
-.thumbnail {
-  display: block;
-  width: 100%;
-  padding-bottom: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-image: url(http://www.yeahbutscience.com/wp-content/uploads/2015/09/1200px-1e0657_scale.jpg);
-  margin-bottom: 14%; }
-
-.portfolio {
-  padding: 0 40px;
-  margin-top: 40px; }
-  .portfolio .every-page {
-    margin-top: 0; }
-
-hr {
-  border-color: #37373b; }
-
-.gallery {
-  padding: 40px 40px 0 40px; }
-  .gallery a {
-    margin-bottom: 8%; }
 
 /*# sourceMappingURL=stylesheet.css.map */
