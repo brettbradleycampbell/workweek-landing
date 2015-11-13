@@ -304,7 +304,7 @@ textarea {
 /* Skeleton Grid */
 .container {
   position: relative;
-  width: 100%;
+  width: 90%;
   max-width: 900px;
   margin: 0 auto;
   box-sizing: border-box; }
@@ -439,8 +439,7 @@ html {
   box-sizing: border-box; }
 
 p {
-  line-height: 1.8em;
-  color: #414345; }
+  line-height: 1.8em; }
 
 a {
   text-decoration: none;
@@ -481,15 +480,16 @@ a {
       .logo h1 a:hover {
         color: #8854B2; }
 
-.nav .nav-menu a {
-  display: block;
-  padding: 8px;
-  margin: 0 8px;
-  text-decoration: none;
-  font-size: 10pt;
-  color: #999; }
-  .nav .nav-menu a:hover {
-    color: #666666; }
+.nav {
+  font-size: 10pt; }
+  .nav a {
+    display: inline-block;
+    padding: 8px;
+    margin: 0 8px;
+    text-decoration: none;
+    color: #999; }
+    .nav a:hover {
+      color: #666666; }
 
 @media only screen and (min-width: 480px) {
   .header {
@@ -513,21 +513,6 @@ a {
   text-align: center;
   margin-bottom: 40px; }
 
-.section.about {
-  max-width: 600px;
-  padding-bottom: 40px; }
-
-.about-image {
-  width: 200px;
-  height: 200px;
-  background-size: cover;
-  border-radius: 100%;
-  margin: 0 auto;
-  overflow: hidden; }
-
-.about-text {
-  padding-top: 20px; }
-
 @media only screen and (min-width: 600px) {
   .desktop-table {
     display: table; }
@@ -544,7 +529,6 @@ a {
   padding: 20px; }
 
 .section.contact {
-  max-width: 400px;
   text-align: center;
   padding-bottom: 80px; }
 
@@ -555,12 +539,12 @@ a {
   width: 100%;
   padding: 10px;
   border-radius: 1px;
-  border: 1px solid #ccc;
-  background: transparent;
+  border: 2px solid #ccc;
+  background: #fff;
   margin-bottom: 1em;
   box-sizing: border-box;
-  -webkit-transition: border .3s;
-  color: #8854B2; }
+  -webkit-transition: .3s border;
+  transition: .3s border; }
   .contact form input[type="email"]:focus,
   .contact form input[type="text"]:focus,
   .contact form input[type="submit"]:focus,
@@ -570,12 +554,14 @@ a {
 .contact form label {
   display: block;
   text-align: left;
-  padding: 4px 0;
-  color: #777; }
+  padding: 4px 0; }
 .contact form input[type="submit"] {
   border-color: #8854B2;
   background: #8854B2;
-  color: #fff; }
+  color: #fff;
+  padding: 20px 0;
+  -webkit-transition: .3s all;
+  transition: .3s all; }
   .contact form input[type="submit"]:hover {
     background: #6e4291;
     border-color: #6e4291; }

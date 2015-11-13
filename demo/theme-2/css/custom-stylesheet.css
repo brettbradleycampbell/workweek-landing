@@ -1,0 +1,67 @@
+body {
+	background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/geometry.png);
+	background-repeat: repeat;
+	font-size: 18px;
+	color: #414345;
+	font-family: "Droid Serif", serif;
+}
+
+/* Homepage Image Grid*/
+.grid li {
+	padding: 18px;
+}
+.grid {
+	max-width: 1200px;
+}
+/* Headers Font */
+h1,h2,h3,h4,h5 {
+	font-family: Helvetica;
+}
+/* Header Font */
+.logo h1 a {
+	font-family: "Droid Serif", serif;
+	font-size: 36px;
+	color: #555;
+}
+/* Menu Font */
+.nav {
+	font-family: Helvetica;
+	font-size: 18px;
+}
+.nav a {
+	color: #bbb;
+}
+.logo h1 a:hover,
+.nav a:hover {
+	color: rgb(50,200,255);
+}
+
+.section.contact .container {
+	max-width: 500px;
+}
+/* contact form */
+.contact form input[type="email"], 
+.contact form input[type="text"], 
+.contact form textarea,
+.portfolio .container.project-footer {
+	border-color: #aaa;
+}
+.contact form input[type="email"]:focus,
+.contact form input[type="text"]:focus, 
+.contact form textarea:focus {
+	border-color: rgb(50,200,255);
+}
+
+.contact form input[type="submit"] {
+	background: rgb(50,200,255);
+	border-color: rgb(50,200,255);
+}
+.contact form input[type="submit"]:hover {
+	background: rgb(20,160,215);
+	border-color: rgb(20,160,215);
+}
+
+/* Page width */
+.page-content {
+	max-width: 600px;
+}

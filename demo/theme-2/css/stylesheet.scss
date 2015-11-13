@@ -78,7 +78,6 @@ html {
 
 p {
     line-height: 1.8em;
-    color: #414345;
 }
 
 a {
@@ -132,17 +131,15 @@ a {
     }
 }
 .nav {
-    .nav-menu {
-        a {
-            display: block;
-            padding: 8px;
-            margin: 0 8px;
-            text-decoration: none;
-            font-size: $menu-font-size;
-            color: $menu-font-color;
-            &:hover {
-                color: $menu-font-color-hover;
-            }
+    font-size: $menu-font-size;
+    a {
+        display: inline-block;
+        padding: 8px;
+        margin: 0 8px;
+        text-decoration: none;
+        color: $menu-font-color;
+        &:hover {
+            color: $menu-font-color-hover;
         }
     }
 }
@@ -181,24 +178,6 @@ a {
     margin-bottom: 40px;
 }
 
-
-// ABOUT
-.section.about {
-    max-width: 600px;
-    padding-bottom: 40px;
-}
-.about-image {
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    border-radius: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-.about-text {
-    padding-top: 20px;
-}
-
 @media only screen and (min-width: 600px) {
     .desktop-table {
         display: table;
@@ -218,7 +197,6 @@ a {
 // CONTACT
 
 .section.contact {
-    max-width: 400px;
     text-align: center;
     padding-bottom: 80px;
 }
@@ -231,14 +209,14 @@ a {
         width: 100%;
         padding: 10px;
         border-radius: 1px;
-        border: 1px solid #ccc;
-        background: transparent;
+        border: 2px solid #ccc;
+        background: #fff;
         margin-bottom: 1em;
 
         box-sizing: border-box;
 
-        -webkit-transition: border .3s;
-        color: $purple;
+        -webkit-transition: .3s border;
+        transition: .3s border;
 
         &:focus {
             outline: none;
@@ -250,13 +228,15 @@ a {
         display: block;
         text-align: left;
         padding: 4px 0;
-        color: #777;
     }
 
     input[type="submit"] {
         border-color: $purple;
         background: $purple;
         color: #fff;
+        padding: 20px 0;
+        -webkit-transition: .3s all;
+        transition: .3s all;
         &:hover {
             background: darken($purple, 10%);
             border-color: darken($purple, 10%);
@@ -313,24 +293,5 @@ ul.reset {
     padding: 0;
     list-style: none;
 }
-
-
-
-// ==========================================================================
-//    EXAMPLE Media Queries for Responsive Design.
-//    These examples override the primary ('mobile first') styles.
-//    Modify as content requires.
-//    ==========================================================================
-
-@media only screen and (min-width: 35em) {
-    // Style adjustments for viewports that meet the condition
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    // Style adjustments for high resolution devices
-}
-
 
 
