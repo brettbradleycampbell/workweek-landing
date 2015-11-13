@@ -1,0 +1,399 @@
+// =========
+// variables
+// =========
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic);
+
+
+// =========
+// variables
+// =========
+$small-device: 768px;
+$selection-background: #b3d4fc; // default: #b3d4fc -- see _html5bp.scss
+$default-padding: 24px;
+
+// user-set variables: 
+
+// fonts: 
+$body-font-size: 16px;
+$body-font-color: #313349;
+$body-font-family: Arial, sans-serif;
+$headers-font-family: "Lora", Times, serif;
+$footer-font-size: 12px;
+
+// menu: 
+$menu-font-family: Arial, sans-serif;
+$menu-font-size: 10pt;
+$menu-font-color: #5a5a5a;
+$menu-font-color-hover: darken($menu-font-color, 20%);
+
+// header:
+$header-font-size: 32px;
+$header-font-color: #51555c;
+$header-font-color-hover: rgb(230,70,70);
+$fixed-header: F; // maybe remove this option? yeah, probably.
+
+// colors
+$primary-color: red;
+$link-color: #999;
+$link-color-hover: $primary-color;
+
+
+// template specific
+$thumbnail-hover-color: rgba(230,70,70,.8);
+$thumbnail-hover-font-size: 20px;
+
+$show-thumbnail-title: T;
+
+// contact
+$button-background: #333;
+$button-background-hover: darken($button-background, 10%);
+
+
+
+// other
+$section-padding: 40px;
+$light-border: 1px solid #ccc;
+$border-radius: 2px;
+
+$hero-height: 300px;
+
+$container-max-width: 1200px; // -- see skeleton.scss
+
+// Buttons
+$button-padding: 8px 12px;
+$button-color: #fff;
+
+
+// =========
+// import partials
+// =========
+@import "normalize.scss";
+@import "html5bp.scss";
+@import "skeleton.scss";
+
+a {
+    -webkit-transition: .2s color;
+    transition: .2s color;
+}
+
+/* Stylesheet */
+
+// ==========
+// CSS Styles
+// ==========
+body {
+    @if $fixed-header == T {
+        margin-top: 140px;
+    }
+    color: $body-font-color;
+    font-family: $body-font-family; 
+    font-size: $body-font-size;    
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+img {
+    max-width: 100%;
+}
+p {
+    line-height: 1.5em;
+}
+a {
+    text-decoration: none;
+    color: $link-color;
+    &:hover {
+        color: $link-color-hover;
+    }
+}
+h1, h2, h3, h4, h5 {font-family: $headers-font-family;}
+h1 {font-size: 28px;}
+h2 {font-size: 24px;}
+h3 {font-size: 20px;}
+h4 {font-size: 18px;}
+h5 {font-size: 16px;}
+
+
+// HEADER
+.header {
+    padding: 32px 0;
+    text-align: center;
+    @if $fixed-header == T {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 1;
+    }
+    @media only screen and (min-width: $small-device) {
+        text-align: left;
+        padding: 48px 0;
+    }
+
+}
+
+.logo {
+    text-align: center;
+    padding: 0 10px 20px 10px;
+    @media only screen and (min-width: $small-device) {
+        text-align: left;
+        padding: 0;
+    }
+
+    h1 {
+        margin: 0;
+        a {
+            font-size: $header-font-size;
+            color: $header-font-color;
+            &:hover {
+                color: $header-font-color-hover;
+            }
+        }
+    }
+}
+.nav {
+    text-align: center;
+    font-family: $menu-font-family;
+    font-size: $menu-font-size;
+    @media only screen and (min-width: $small-device) {
+        text-align: right;
+    }
+    a {
+        display: block;
+        padding: 8px 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $menu-font-color;
+        &:hover {
+            color: $menu-font-color-hover;
+        }
+        @media only screen and (min-width: $small-device) {
+            display: inline-block;
+            margin-left: 24px;
+        }
+    }
+}
+
+.column.logo,
+.column.nav {
+    float: none;
+    width: 100%;
+}
+
+@media only screen and (min-width: $small-device) {
+
+    .column.logo {
+        width: auto;
+        float: left;
+    }
+    .column.nav {
+        width: auto;
+        float: right;
+    }
+}
+
+// PAGES
+
+
+// // PORTFOLIO 
+.portfolio .thumbnail-container {
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.project-title {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    //
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    background: #333;
+    background: $thumbnail-hover-color;
+    font-size: $thumbnail-hover-font-size;
+    color: #fff;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    &:hover {
+        opacity: 1;
+    }
+    span {
+        position: absolute;
+        top: 50%;
+        margin-top: -0.55em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+// New grid
+.thumbnail {
+    display: block;
+    width: 100%;
+    padding-bottom: 66%;
+    background-size: cover;
+    background-position: center center;
+
+    -webkit-transition: transform 1s;
+    transition: transform 1s;
+
+    &:hover {
+        -ms-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02);
+    }
+}
+.thumbnail:hover + .project-title {
+    @if $show-thumbnail-title == T{
+        opacity: 1;
+    } else {
+        opacity: 0;
+    }
+}
+
+// PROJECT PAGE
+.section.project {
+    overflow: hidden; // to avoid horizontal scrolling when the font size spills over.  super annoying.  
+}
+.project-description {
+    float: right;
+    h2 {
+        margin-top: 0;
+    }
+}
+.project-images {
+    text-align: center;
+    margin-left: 0; // override the default margin for the columns, since it's actually the right column
+    display: block;
+    img {
+        margin-bottom: 4%;
+    }
+}
+
+.portfolio .container.project-footer {
+    border-top: $light-border;
+    margin-top: 40px;
+    padding-top: 40px;
+}
+
+
+// CONTACT
+
+.section.contact {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.contact form  {
+    input[type="email"], 
+    input[type="text"], 
+    input[type="submit"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 1px;
+        border: $light-border;
+        background: transparent;
+        margin-bottom: 1em;
+
+        box-sizing: border-box;
+
+        -webkit-transition: .3s border;
+        transition: .3s border;
+
+        &:focus {
+            outline: none;
+            border-color: $primary-color;
+        }
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        padding: 4px 0;
+    }
+
+    input[type="submit"] {
+        border-color: $primary-color;
+        background: $primary-color;
+        color: #fff;
+        padding: 24px;
+        -webkit-transition: .3s all;
+        transition: .3s all;
+
+        &:hover {
+            background: darken($primary-color, 10%);
+            border-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// FOOTER
+.footer {
+    padding: 24px 0;
+    color: #a1a3a4;
+    font-size: $footer-font-size;
+    text-align: center;
+}
+
+//////////////  //
+//   ELEMENTS  //
+////////////  //
+
+// BUTTONS
+.button {
+    background: $button-background;
+    display: inline-block;
+    padding: $button-padding;
+    border-radius: $border-radius;
+    color: $button-color;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+// FORMATTING
+
+.center-text {text-align: center;}
+.right-text {text-align: right;}
+
+// need this?
+.group {
+    content: "";
+    display: table;
+    width: 100%;
+    text-align: center;
+    &:after {
+        clear: both;
+    }
+    &.three .float {
+        width: 33.333333333%;
+    }
+    .float {
+        float: left;
+    }
+}
+ul.reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.portfolio {
+    .every-page {
+        margin-top: 0;
+    }
+}
+hr {border-color: #37373b}
+.gallery {
+    padding: 40px 40px 0 40px;
+    a {
+        margin-bottom: 8%;
+    }
+}
+
+
